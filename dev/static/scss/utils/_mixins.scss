@@ -1,0 +1,17 @@
+@mixin adaptive-from($min) {
+  @media (min-width: #{$min}) {
+    @content;
+  }
+}
+
+@mixin adaptive-to($max) {
+  @media (max-width: #{$max - 1px}) {
+    @content;
+  }
+}
+
+@mixin adaptive-between($min, $max) {
+  @media (min-width: #{$min}) and (max-width: #{$max - 1px}) {
+    @content;
+  }
+}

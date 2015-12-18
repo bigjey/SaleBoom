@@ -1,0 +1,63 @@
+.p-about {
+
+  padding: 0 10px;
+
+  @include adaptive-to($tablet-w){
+    padding: 0;
+  }
+
+  .page-side-nav {
+    position: relative;
+    padding-bottom: 350px;
+     .decor {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    @include adaptive-to($desktop-w){
+      padding-bottom: 0;
+      .decor {
+        display: none;
+      }
+    }
+  }
+
+  .team {
+    padding-top: 20px;
+    .block-title {
+      font-size: 24px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      @include adaptive-to($tablet-w){
+        text-align: center;
+      }
+      li {
+        display: inline-block;
+        width: 140px;
+        margin-right: 80px;
+        vertical-align: top;
+        text-align: center;
+        margin-top: 20px;
+        @include adaptive-to($tablet-w){
+          margin-right: 20px;
+        }
+      }
+      .photo {}
+      .name {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 6px;
+      }
+      .position {
+        margin-top: 5px;
+        color: #848a98;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

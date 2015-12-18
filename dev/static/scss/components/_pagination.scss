@@ -1,0 +1,38 @@
+.c-pagination {
+  margin-top: 30px;
+
+  @include adaptive-to($tablet-w){
+    li.prev, li.next {
+      display: none;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      + li {
+        margin-left: 20px;
+      }
+      &.active {
+        a {
+          color: $color-firm-red;
+        }
+      }
+      &.disabled {
+        a {
+          color: #a8b4b4;
+        }
+      }
+      a {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: bold;
+        
+      }
+    }
+  }
+}

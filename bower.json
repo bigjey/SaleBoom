@@ -1,0 +1,23 @@
+{
+  "name": "saleboom",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "bigjey <mail.bigjey@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "normalize-css": "normalize.css#~3.0.3",
+    "sly": "~1.6.1"
+  }
+}

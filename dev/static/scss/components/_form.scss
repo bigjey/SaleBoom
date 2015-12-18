@@ -1,0 +1,58 @@
+.c-form {
+  font-size: 16px;
+  .form-row {
+    + .form-row {
+      margin-top: 15px;
+      &.row-actions {
+        margin-top: 30px;
+      }
+    }
+  }
+  .row-label {
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 5px;
+  }
+  .row-input {
+
+  }
+  input[type=text],  
+  input[type=password],  
+  input[type=number],  
+  input[type=email],
+  textarea {
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 15px;
+    font: normal 14px Arial;
+    border-radius: 3px;
+    border: 1px solid #dcdcdc;
+    &.input-block {
+      width: 100%;
+      display: block;
+    }
+  }
+  textarea {
+    min-height: 100px;
+  }
+  .form-btn {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 14px 15px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #feb737;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3px;
+    &:hover {
+      background-color: darken(#feb737, 5%);
+    }
+    &.btn-block {
+      display: block;
+      width: 100%;
+    }
+  }
+}

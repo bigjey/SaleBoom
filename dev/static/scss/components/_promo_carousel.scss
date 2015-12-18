@@ -1,0 +1,63 @@
+.c-promo-carousel {
+  width: 100%; 
+  height: 215px; 
+  padding: 0;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+
+  .slidee {
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    list-style: none;
+    width: 20000px;
+  }
+
+  .item {
+    float: left;     
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+
+    &:hover {
+      img {
+        transform: scale(1.02);
+      }
+    }
+
+    img {
+      height: 215px;
+      display: block;
+
+      transition: transform .4s ease;
+    }
+  }
+
+  .prev, .next {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    transition: opacity .2s ease;
+    line-height: 215px;
+    padding: 0 10px;
+    &.disabled {
+      opacity: 0;
+    }
+  }
+
+  .prev {
+    left: 0;
+    background-image: linear-gradient(to left, transparent 0%, rgba(0,0,0, .5));
+    .icon {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .next {
+    right: 0;
+    text-align: right;
+    background-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.5));
+  }
+}

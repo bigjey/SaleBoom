@@ -1,0 +1,148 @@
+.l-footer {
+  background: #efefef;
+
+  > .wrap {
+    @extend .clearfix;
+
+    position: relative;
+    padding: 30px 30px;
+
+    @include adaptive-between($tablet-w, $desktop-wide-w) {
+      padding-top: 45px + 30px;
+    }
+
+    
+  }
+
+  .copy {
+    color: #777;
+    float: left;
+    width: 185px;
+
+    @include adaptive-between($tablet-w, $desktop-wide-w) {
+      width: auto;
+      margin-right: 40px;
+    }
+
+    @include adaptive-to($tablet-w){
+      display: none;
+    }
+
+  }
+
+  .nav {
+    color: #484848;
+    float: left;
+
+    @include adaptive-between($tablet-w, $desktop-wide-w) {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      float: none;
+    }
+
+    @include adaptive-to($tablet-w){
+      float: none;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+
+
+        @include adaptive-to($tablet-w){
+          margin-right: 25px;
+          margin-bottom: 15px;
+
+        }
+
+        + li {
+          margin-left: 25px;
+
+          @include adaptive-between($tablet-w, $desktop-wide-w) {
+            margin-left: 40px;
+          }          
+
+          @include adaptive-to($tablet-w){
+            margin-left: 0;
+          }
+
+        }
+
+        &.active {
+          a {
+            color: $color-firm-red;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    a {
+      color: #484848;
+      &:hover {
+        color: $color-firm-red;
+      }
+    }
+  }
+
+  .social {
+    float: left;
+    margin-left: 60px;
+    color: #a8a8a8;
+
+    @include adaptive-to($tablet-w) {
+      margin-left: 0px;
+      float: none;
+      padding-top: 10px;
+      font-size: 28px;
+    }
+
+    @include adaptive-between($desktop-w, $desktop-wide-w){
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+
+
+    .label {
+      margin-right: 10px;
+
+      @include adaptive-to($tablet-w) {
+        display: none;
+      }
+    }
+
+    a {
+      display: inline-block;
+      color: #b4b4b4;
+
+      @include adaptive-to($tablet-w) {
+        color: #000;
+      }
+
+      &:hover {
+        color: #e61235;
+      }
+
+      + a {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .dev {
+    float: right;
+
+    @include adaptive-to($tablet-w) {
+      float: none;
+      margin-top: 50px;
+    }
+
+  }
+
+}

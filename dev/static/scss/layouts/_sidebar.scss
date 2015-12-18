@@ -1,0 +1,273 @@
+.l-sidebar {
+  float: left;
+  width: 200px;
+  position: relative;
+  
+  @include adaptive-to($desktop-w){
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 320px;
+    float: none;
+    background: #fff;
+    z-index: 200;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+    transform: translateX(100%);
+    transition: transform .3s ease;
+
+    body.show-nav & {
+      transform: translateX(0);
+    }
+
+    .sidebar-top {
+      height: 150px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      padding: 30px 20px 20px;
+    }
+  }
+
+  @include adaptive-to($tablet-w) {
+    .sidebar-top {
+      height: auto;
+      padding: 10px 15px;
+    }
+  }
+
+  .sidebar-in {
+    overflow: auto;
+  }
+
+  .hamburger-icon {
+    position: absolute;
+    right: 30px;
+    top: 45px;
+
+    @include adaptive-to($tablet-w) {
+      top: 20px;
+      right: 15px;
+    }
+  }
+
+  .switcher {
+    @extend .clearfix;
+    margin-bottom: 15px;
+
+    @include adaptive-to($desktop-w){
+      margin: 0;      
+    width: 240px;
+    }
+
+    a {
+      display: block;
+      width: 50%;
+      float: left;
+      text-align: center;
+      border: 1px solid #e6e6e6;
+      height: 30px;
+      line-height: 29px;
+      text-transform: uppercase;
+      color: #999;
+      font-size: 13px;
+      font-weight: bold;
+
+      &.active,
+      &:hover {
+        color: #000;
+      }
+
+      &:first-child {
+        border-right: none;
+        border-radius: 5px 0 0 5px;
+        &.active {
+          background: rgb(255,180,51); /* Old browsers */
+          background: -moz-linear-gradient(left,  rgba(255,180,51,1) 0%, rgba(250,217,97,1) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(left,  rgba(255,180,51,1) 0%,rgba(250,217,97,1) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to right,  rgba(255,180,51,1) 0%,rgba(250,217,97,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb433', endColorstr='#fad961',GradientType=1 ); /* IE6-9 */
+        }
+      }
+      &:last-child {
+        border-radius: 0 5px 5px 0;
+        &.active {
+          background: rgb(255,180,51); /* Old browsers */
+          background: -moz-linear-gradient(right,  rgba(255,180,51,1) 0%, rgba(250,217,97,1) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(right,  rgba(255,180,51,1) 0%,rgba(250,217,97,1) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to left,  rgba(255,180,51,1) 0%,rgba(250,217,97,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb433', endColorstr='#fad961',GradientType=1 ); /* IE6-9 */
+        }
+      }
+    }
+
+  }
+
+  .nav {
+
+    @include adaptive-to($desktop-w){
+      padding: 20px;
+      position: absolute;
+      top: 150px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: auto;
+    }
+
+    @include adaptive-to($tablet-w) {
+      top: 100px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        a {
+          display: block;
+          padding-right: 30px;
+          position: relative;
+          &:hover {
+            color: $color-firm-red;
+          }
+          .count {
+            width: 0;
+          }
+          .star {
+            position: absolute;
+            left: -20px;
+            top: -3px;
+          }
+        }
+      }
+    }
+    .lvl-1 {
+        padding-left: 20px;
+      > li {
+        +li {
+          margin-top: 13px;
+        }
+        > a {
+          
+          @include adaptive-to($desktop-w){
+            font-size: 20px;
+            line-height: 24px;
+          }
+
+          font-size: 18px;
+          font-weight: bold;
+          padding-bottom: 5px;
+          border-bottom: 1px dashed #ededed;
+          .count {
+            margin-left: 10px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .lvl-2 {
+      padding: 10px 0 10px;
+      > li {
+        + li {
+          margin-top: 10px;
+        }
+        > a {
+
+          @include adaptive-to($desktop-w){
+            font-size: 17px;
+            line-height: 20px;
+          }
+
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+    }
+    .lvl-3 {
+      padding: 15px 0 15px;
+      > li {
+        + li {
+          margin-top: 10px;
+        }
+        > a {
+
+          @include adaptive-to($desktop-w){
+            font-size: 16px;
+          }
+
+          color: #7f7f7f;
+          .count {
+            font-size: 10px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .ad-box {
+
+    @include adaptive-to($desktop-w){
+      display: none;
+    }
+
+    margin-top: 20px;    
+    img {
+      display: block;
+      margin: auto;      
+    }
+  }
+
+  .auth {
+    padding-bottom: 28px;
+
+    @include adaptive-from($desktop-w){
+      display: none;
+    }
+
+    @include adaptive-to($tablet-w) {
+      padding-bottom: 15px;
+    }
+
+    .loginned {
+      span {
+        display: block;
+      }
+      .img {
+        float: left;
+      }
+      .name {
+        margin-left: 55px;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: bold;
+        padding-top: 2px;
+      }
+      .logout {
+        margin-left: 55px;
+        font-size: 14px;
+        padding-top: 3px;
+        a {
+          color: $color-firm-red;
+        }
+      }
+    }
+    .actions {
+      font-size: 16px;
+      padding-top: 15px;
+      a {
+        + a {
+          margin-left: 15px;
+        }
+        &.active {
+          color: $color-firm-red;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+}
