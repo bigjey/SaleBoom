@@ -2,12 +2,9 @@
   "name": "saleboom",
   "description": "",
   "main": "index.js",
-  "authors": [
-    "bigjey <mail.bigjey@gmail.com>"
-  ],
   "license": "ISC",
+  "homepage": "https://github.com/bigjey/SaleBoom",
   "moduleType": [],
-  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -17,7 +14,8 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
+    "sly": "~1.6.1",
     "normalize-css": "normalize.css#~3.0.3",
-    "sly": "~1.6.1"
+    "salvattore": "~1.0.9"
   }
 }

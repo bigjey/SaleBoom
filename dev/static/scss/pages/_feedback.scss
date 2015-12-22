@@ -1,0 +1,17 @@
+.p-feedback {
+  .c-form {
+    max-width: 600px;
+    p.hero {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 2em;
+    }
+    input[type=text].short{
+      max-width: 380px;
+    }
+    .form-btn.extra-padding {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+}

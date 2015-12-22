@@ -1,0 +1,156 @@
+.p-how-it-works {
+  position: relative;
+  
+  .hero {
+    font-size: 16px;
+  }
+
+  .how-steps {
+    text-align: center;
+    @include adaptive-to($tablet-w){
+      text-align: left;
+    }
+    .step-box {
+      text-align: left;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 50px;
+      margin-right: -50px;
+      font-size: 0;
+      @include adaptive-to($desktop-w){
+        display: block;
+        margin-right: 0;
+        margin-left: 30px;
+      }
+      @include adaptive-to($tablet-w){
+        margin-left: 0;
+      }
+      &.img-right {
+        .step-img {
+          position: relative;
+          left: 300px;
+          @include adaptive-to($tablet-w){
+            text-align: left;
+            left: auto;
+          }
+        }
+        .step-content {
+          position: relative;
+          left: -300px;
+          @include adaptive-to($tablet-w){
+            text-align: left;
+            left: auto;
+          }
+        }
+      }
+    }
+    .step-img {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 280px;
+      @include adaptive-to($tablet-w){
+        display: block;
+        max-width: 320px;
+        margin-bottom: 20px;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+    .step-content {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 300px;
+      position: relative;
+      padding-left: 65px;
+      font-size: 14px;
+      @include adaptive-to($tablet-w){
+        display: block;
+        max-width: 320px;
+        padding-left: 0;
+      }
+    }
+    .step-num {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffc960;
+      width: 44px;
+      height: 44px;
+      border: 4px solid #ffc960;
+      border-radius: 22px;
+      text-align: center;
+      line-height: 36px;
+      position: absolute;
+      left: 0;
+      top: -8px;
+      @include adaptive-to($tablet-w){
+        display: none;
+      }
+      
+    }
+    .step-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      @include adaptive-to($tablet-w){
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+    }
+    .step-text {
+      font-size: 18px;
+      line-height: 28px;
+      @include adaptive-to($tablet-w){
+        font-size: 16px;
+      }
+    }
+  }
+
+  .how-apps {
+    margin-top: 50px;
+    @include adaptive-from($desktop-w){
+      position: absolute;
+      top: 300px;
+      right: 100px;
+      width: 220px;
+      margin-top: 0;
+    }
+    .block-title {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .btn {
+      display: inline-block;
+      background: $bg-btn;
+      padding: 0 10px; 
+      color: #000;
+      border-radius: 3px;
+      font-size: 16px;
+      line-height: 24px;
+      height: 37px;
+      line-height: 37px;
+      margin-bottom: 10px;
+      margin-right: 15px;
+      &:hover {
+        background: darken($bg-btn, 10%);
+      }
+      .icon-box {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+        .icon-app-mac {
+          margin-top: -4px;
+        }
+        .icon-app-android {
+          margin-top: -2px;
+        }
+      }
+    }
+    p {
+      margin-top: 10px;
+      line-height: 24px;
+    }
+  }
+  
+}

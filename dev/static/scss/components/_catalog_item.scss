@@ -1,10 +1,11 @@
 .c-catalog-item {
 
-  width: 50%;
+  //width: 50%;
   display: inline-block;
+  width: 100%;
   vertical-align: top;
   font-size: 12px;
-
+/* 
   @include adaptive-from($desktop-wide-w){
     width: 33.33333%;
   }
@@ -12,7 +13,7 @@
   @include adaptive-to($tablet-w - 100px){
     width: 100%;
   }
-
+ */
   &:not(.horizontal) {
     &:hover {
       .img a {

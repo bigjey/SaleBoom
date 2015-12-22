@@ -7,10 +7,8 @@
 <title>Saleboom</title>
 
 
-<!-- build:css ../css/vendors.css -->
-<!-- bower:css -->
-<link rel="stylesheet" href="../../../bower_components/normalize-css/normalize.css" />
-<!-- endbower -->
+<!-- build:css ../static/css/vendors.css -->
+<link rel="stylesheet" href="../../bower_components/normalize-css/normalize.css" />
 <!-- endbuild -->
 
 <link rel="stylesheet" href="../static/css/main.css">
@@ -174,7 +172,7 @@
 
   <div class="l-content wrap">
       
-    <div class="l-sidebar" > <!-- data-window-height="-100" -->
+    <div class="l-sidebar" >
 
       <div class="sidebar-in">
       
@@ -328,7 +326,7 @@
 
     <div class="l-content-main">
 
-      <div class="b-catalog">
+      <div class="b-catalog" data-columns>
         
         <div class="c-catalog-item">
           <div class="img">
@@ -715,7 +713,7 @@
 
       </div>
 
-      <div class="b-catalog">
+      <div class="b-catalog" data-columns>
         
         <div class="c-catalog-item">
           <div class="img">
@@ -1017,13 +1015,12 @@
   </div>
   
   
-  <!-- build:js ../js/vendors.js -->
-<!-- bower:js -->
-<script src="../../../bower_components/jquery/dist/jquery.js"></script>
-<!-- endbower -->
-<script src="../../../bower_components/sly/dist/sly.js"></script>
+  <!-- build:js ../static/js/vendors.js -->
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
 
-<script src="../../bower_components/sticky-kit/jquery.sticky-kit.js"></script>
+<script src="../../bower_components/sly/dist/sly.js"></script>
+
+<script src="../../bower_components/salvattore/dist/salvattore.js"></script>
 <!-- endbuild -->
 
 <script src="../static/js/main.js"></script>

@@ -27,5 +27,8 @@
     "gulp.spritesmith": "^6.0.0",
     "merge-stream": "^1.0.0",
     "wiredep": "^2.2.2"
+  },
+  "dependencies": {
+    "gulp-minify-css": "^1.2.2"
   }
 }

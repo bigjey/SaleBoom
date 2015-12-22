@@ -37,6 +37,12 @@
     }
   }
 
+  &.sidebar-inner {    
+    @include adaptive-from($desktop-w){
+      display: none;
+    }
+  }
+
   .sidebar-in {
     overflow: auto;
   }

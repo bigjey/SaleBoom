@@ -1,0 +1,8 @@
+.p-about-ads {
+
+  padding: 0 10px;
+
+  @include adaptive-to($tablet-w){
+    padding: 0;
+  }
+}

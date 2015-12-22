@@ -1,0 +1,218 @@
+.p-profile {
+  @extend .clearfix;
+  padding: 0 10px;
+
+  .profile-favorites {
+    float: left;
+    width: 100%;
+    padding-right: 400px;
+    @include adaptive-to($tablet-w){
+      float: none;
+      padding-right: 0;
+    }
+    .block-title {
+      font-size: 24px;
+      margin-bottom: 30px;
+      @include adaptive-to($tablet-w){
+        margin-bottom: 15px;
+      }
+    }
+
+    .decor {
+      float: right;
+      margin-top: -60px;
+      margin-left: 20px;
+      @include adaptive-to($desktop-wide-w){
+        display: none;
+      }
+    }
+
+    .hero {
+      font-size: 16px;
+      line-height: 24px;
+      a {
+        color: $color-firm-red;
+      }
+      p {
+        margin-top: 0;
+      }
+    }
+
+    .favorites {
+      padding-top: 40px;
+      .tabs {
+        .tabs-nav {
+          display: none;
+          margin-bottom: 20px;
+          @extend .clearfix;
+          @include adaptive-to($desktop-wide-w){
+            display: block;
+          }
+
+          a {
+            display: block;
+            padding: 0 15px;
+            float: left;
+            text-align: center;
+            border: 1px solid #e6e6e6;
+            height: 30px;
+            line-height: 29px;
+            text-transform: uppercase;
+            color: #999;
+            font-size: 13px;
+            font-weight: bold;
+
+            + a {
+              border-left: none;
+            }
+
+            &.active,
+            &:hover {
+              color: #000;
+              background: #fad961;
+            }
+
+            &:first-child {
+              border-radius: 5px 0 0 5px;
+              &.active {
+                background: rgb(255,180,51); /* Old browsers */
+                background: -moz-linear-gradient(left,  rgba(255,180,51,1) 0%, rgba(250,217,97,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left,  rgba(255,180,51,1) 0%,rgba(250,217,97,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right,  rgba(255,180,51,1) 0%,rgba(250,217,97,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb433', endColorstr='#fad961',GradientType=1 ); /* IE6-9 */
+              }
+            }
+            &:last-child {
+              border-radius: 0 5px 5px 0;
+              &.active {
+                background: rgb(255,180,51); /* Old browsers */
+                background: -moz-linear-gradient(right,  rgba(255,180,51,1) 0%, rgba(250,217,97,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(right,  rgba(255,180,51,1) 0%,rgba(250,217,97,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to left,  rgba(255,180,51,1) 0%,rgba(250,217,97,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb433', endColorstr='#fad961',GradientType=1 ); /* IE6-9 */
+              }
+            }
+          }
+
+
+        }
+        .tabs-content {
+          @extend .clearfix;
+          .tab {
+            display: inline-block;
+            vertical-align: top;
+            width: 33%;
+            padding-right: 25px;
+            @include adaptive-to($desktop-wide-w){
+              display: none;
+              width: auto;
+              &.active {
+                display: block;
+              }
+            }
+            .tab-title {
+              font-size: 13px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              color: #999;
+              margin-bottom: 20px;
+              @include adaptive-to($desktop-wide-w){
+                display: none;           
+              }
+              .count {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+      .favorites-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        li {
+          position: relative;
+          padding-left: 25px;
+          + li {
+            margin-top: 15px;
+          }
+          .icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+
+  }
+  
+  .profile-settings {
+    width: 320px;
+    float: left;
+    margin-left: -320px;
+    @include adaptive-to($tablet-w){
+      width: auto;
+      float: none;
+      margin-left: 0;
+      margin-top: 50px;
+    }
+    .block-title {
+      font-size: 24px;
+      margin-bottom: 30px;
+      @include adaptive-to($tablet-w){
+        margin-bottom: 15px;
+      }
+    }
+    .group {
+      + .group {
+        margin-top: 50px;
+      }
+      .group-title {
+        color: #999;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+        .profile-edit {
+          margin-left: 15px;
+        }
+      }
+    }
+
+    .auth {
+      @extend .clearfix;
+      .avatar {
+        width: 80px;
+        float: left;
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+      .content {
+        margin-left: 100px;
+        font-size: 16px;
+        .name {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          line-height: 1;
+        }
+        .city {
+          color: #7f7f7f;
+          margin-bottom: 10px;
+        }
+        .email {}
+      }
+    }
+    .change-password {
+      width: 240px;
+      @include adaptive-to($tablet-w){
+        width: auto;
+      }
+    }
+  }
+
+}

@@ -1,5 +1,16 @@
 .c-form {
   font-size: 16px;
+  &.form-horizontal {
+    .row-label {
+      float: left;
+      width: 155px;
+      padding-top: 10px;
+    }
+    .row-elements {
+      margin-left: 170px;
+      min-width: 200px;
+    }
+  }
   .form-row {
     + .form-row {
       margin-top: 15px;
@@ -20,10 +31,11 @@
   input[type=password],  
   input[type=number],  
   input[type=email],
-  textarea {
+  textarea,
+  select {
     height: 40px;
     line-height: 20px;
-    padding: 10px 15px;
+    padding: 10px 10px;
     font: normal 14px Arial;
     border-radius: 3px;
     border: 1px solid #dcdcdc;
@@ -36,17 +48,21 @@
     min-height: 100px;
   }
   .form-btn {
-    font-size: 16px;
-    line-height: 22px;
-    padding: 14px 15px;
-    font-weight: bold;
     color: #000;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     background: #feb737;
     cursor: pointer;
     border: 0;
     border-radius: 3px;
+    font-size: 14px;
+    padding: 10px 15px;
+    font-weight: bold;
+    &.btn-bigger {      
+      font-size: 16px;
+      line-height: 22px;
+      padding: 14px 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
     &:hover {
       background-color: darken(#feb737, 5%);
     }
@@ -54,5 +70,27 @@
       display: block;
       width: 100%;
     }
+  }
+
+}
+
+.input-file {
+  display: inline-block;  
+  height: 34px;
+  line-height: 20px;
+  padding: 7px 15px;
+  font: normal 14px Arial;
+  border-radius: 3px;
+  border: 1px solid #000;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  input {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 1000%;
   }
 }

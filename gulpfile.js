@@ -28,6 +28,8 @@ var gulp          = require('gulp'),
     browserSync   = require('browser-sync').create(),
     reload        = browserSync.reload;
 
+var minifyCss     = require('gulp-minify-css');
+
 
 var path = {
   dev: {
@@ -56,6 +58,49 @@ var path = {
   }
 }
 
+// build
+
+
+gulp.task('css:build', function(){
+
+  var processors = [
+    autoprefixer({browsers: ['last 2 versions'], cascade: false})
+  ];
+
+  gulp.src('./dev/static/scss/**/*.scss')
+    .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('./build/static/css/'));
+
+})
+
+gulp.task('html:build', function () {
+    return gulp.src('./dev/html-preview/*.html')
+        .pipe(useref())
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(gulp.dest('./build/html/'));
+});
+
+gulp.task('move:build', function () {
+    gulp.src('./dev/tmp/**/*')
+        .pipe(gulp.dest('./build/tmp'))
+        
+    gulp.src('./dev/static/fonts/**/*')
+        .pipe(gulp.dest('./build/static/fonts/'))
+        
+    gulp.src('./dev/static/i/*')
+        .pipe(gulp.dest('./build/static/i/'))
+        
+    gulp.src('./dev/static/js/*')
+        .pipe(gulp.dest('./build/static/js/'))
+});
+
+gulp.task('build', [
+    'html:build',
+    'css:build',
+    'move:build'
+]);
 
 gulp.task('clean', function(){
   gulp.src( './build/**/*' )
@@ -88,20 +133,6 @@ gulp.task('sprite', function () {
   return merge(imgStream, cssStream);
 
 });
-
-
-gulp.task('bower_build', function(){
-
-  //var assets = useref.assets();
- 
-  return gulp.src( path.dev.html )
-    .pipe( useref() )
-    .pipe( gulpif( '*.js', uglify() ) )
-    //.pipe( gulpif( '*.css', rebase() ) )
-    .pipe( gulpif( '*.css', minifyCss() ) )
-    .pipe( gulp.dest( path.build.html ) );
-
-})
 
 
 gulp.task('html', function () {

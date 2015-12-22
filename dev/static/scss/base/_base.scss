@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font: normal 14px Arial;
+  font: normal 14px 'museo_sans_cyr', Arial;
   color: #000;
   min-width: 320px;
 }
@@ -52,6 +52,16 @@ a {
   padding: 20px 20px 50px;
   @extend .clearfix;
 
+  &.extra-padding {
+    padding-top: 50px;
+    @include adaptive-to($desktop-w){
+      padding-top: 30px;
+    }
+    @include adaptive-to($tablet-w){
+      padding-top: 20px;
+    }
+  }
+
   .l-content-main {    
     margin-left: 215px;
     overflow: hidden;
@@ -64,8 +74,8 @@ a {
 }
 
 .b-catalog {
-  margin: 0 -10px;
   @extend .clearfix;
+  margin: 0 -10px;
   font-size: 0;
 
   .c-catalog-item {
@@ -73,6 +83,37 @@ a {
     margin-bottom: 20px;
   }
 }
+
+
+.b-catalog[data-columns]::before {
+
+  @include adaptive-to($tablet-w){
+    content: '1 .column.size-1of1';
+  }
+
+  @include adaptive-between($tablet-w, $desktop-wide-w){
+    content: '2 .column.size-1of2';
+  }
+
+  @include adaptive-from($desktop-wide-w){
+    content: '3 .column.size-1of3';
+  }
+}
+
+.b-catalog[data-columns] .column {
+  float: left;
+  width: 100%;
+  &.size-1of1 {
+    width: 100%;
+  }
+  &.size-1of2 {
+    width: 50%;
+  }
+  &.size-1of3 {
+    width: 33.3%;
+  }
+}
+
 
 .catalog-no-items {
   text-align: center;
@@ -357,7 +398,7 @@ body.show-nav {
     padding-top: 0;
 
     border-bottom: 1px solid #e6e6e6;
-    margin: 0 -30px;
+    margin: 0 -20px;
     margin-bottom: 30px;
     padding: 0 30px;
   }
@@ -432,15 +473,19 @@ body.show-nav {
   font-weight: bold;
 
 
-  /* @include adaptive-to($tablet-w){
-   margin: 0;
-  } */
+  @include adaptive-to($tablet-w){
+   font-size: 28px;
+   line-height: 34px;
+  }
 
 }
 
 .article {
   font-size: 16px;
   line-height: 24px;
+  a {
+      color: $color-firm-red;
+  }
   h1 {
     font-size: 44px;
   }
