@@ -73,7 +73,7 @@
     z-index: 5;
     
     @include adaptive-between($tablet-w, $desktop-wide-w){
-      width: 350px;
+      width: 330px;
     }
 
     @include adaptive-to($tablet-w){
@@ -118,9 +118,7 @@
 
       @include adaptive-to($tablet-w){
         margin-left: 55px;
-        display: none;
       }
-
 
       .big {
         font-size: 28px;
@@ -128,15 +126,10 @@
         line-height: 1;
         font-weight: bold;
 
-        @include adaptive-between($desktop-w, $desktop-wide-w){
+        @include adaptive-between($tablet-w, $desktop-wide-w){
           font-size: 22px;
           padding-top: 14px;
         }
-
-        @include adaptive-between($tablet-w, $desktop-w){
-          font-size: 24px;
-          padding-top: 10px;
-        } 
 
         @include adaptive-to($tablet-w){
           font-size: 14px;
@@ -148,11 +141,7 @@
         font-size: 16px;
         line-height: 1;
 
-        @include adaptive-between($desktop-w, $desktop-wide-w){
-          font-size: 14px;
-        }
-
-        @include adaptive-between($tablet-w, $desktop-w){
+        @include adaptive-between($tablet-w, $desktop-wide-w){
           font-size: 16px;
         } 
 
@@ -169,6 +158,10 @@
     float: left;
     width: 330px;
     padding-top: 20px;
+
+    @include adaptive-between($tablet-w, $desktop-w){
+      
+    }
 
     @include adaptive-to($tablet-w){      
       position: absolute;
@@ -198,7 +191,12 @@
         padding: 5px 20px;
         position: relative;
         z-index: 5;
-        border: 1px solid #dcdcdc;
+
+
+        @include adaptive-to($tablet-w){
+          border: 1px solid #ccc;
+        }
+
       }
       input[type=submit]{
         display: block;
@@ -265,6 +263,12 @@
     padding-top: 10px;
     font-size: 17px;
 
+    &.show {
+      .dropdown {
+        display: block;        
+      }
+    }
+
     @include adaptive-between($tablet-w, $desktop-w){
       display: none;
     }
@@ -295,7 +299,6 @@
     .dropdown {
       position: absolute;
       top: 0;
-      left: -20px;
       padding: 11px 10px;
       margin: 0 -10px;
       background: #fff;
@@ -395,7 +398,7 @@
       display: inline-block;
       height: 16px;
       background: #cca14d;
-      border-left: 1px solid #000;
+      border-left: 1px solid #cca14d;
       vertical-align: middle;
 
       @include adaptive-between($desktop-w, $desktop-wide-w){

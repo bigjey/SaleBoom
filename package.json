@@ -21,6 +21,7 @@
     "gulp-postcss": "^6.0.1",
     "gulp-rimraf": "^0.2.0",
     "gulp-sass": "^2.1.1",
+    "gulp-svg-sprite": "^1.2.17",
     "gulp-uglify": "^1.5.1",
     "gulp-useref": "^3.0.3",
     "gulp-watch": "^4.3.5",

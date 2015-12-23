@@ -15,3 +15,10 @@
     @content;
   }
 }
+
+@mixin svg-icon($name){
+  display: inline-block;
+  vertical-align: middle;
+  @extend .svg-icon-#{$name};
+  @extend .svg-icon-#{$name}-dims;
+}

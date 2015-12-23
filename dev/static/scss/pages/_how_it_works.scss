@@ -3,10 +3,12 @@
   
   .hero {
     font-size: 16px;
+    line-height: 24px;
   }
 
   .how-steps {
     text-align: center;
+    padding-top: 30px;
     @include adaptive-to($tablet-w){
       text-align: left;
     }
@@ -91,7 +93,7 @@
     }
     .step-title {
       font-size: 24px;
-      font-weight: bold;
+      font-weight: 900;
       margin-bottom: 10px;
       @include adaptive-to($tablet-w){
         font-size: 22px;

@@ -1,32 +1,35 @@
-var gulp          = require('gulp'),
-    watch         = require('gulp-watch'),
+var gulp          = require('gulp');
+var watch         = require('gulp-watch');
 
-    uglify        = require('gulp-uglify'),
-    concat        = require('gulp-concat'),
+var uglify        = require('gulp-uglify');
+var concat        = require('gulp-concat');
 
-    rimraf        = require('gulp-rimraf'),
+var rimraf        = require('gulp-rimraf');
     
-    gulpFilter    = require('gulp-filter'),
-    gulpif        = require('gulp-if'),
+var gulpFilter    = require('gulp-filter');
+var gulpif        = require('gulp-if');
     
-    wiredep       = require('wiredep').stream,
-    useref        = require('gulp-useref'),
+var wiredep       = require('wiredep').stream;
+var useref        = require('gulp-useref');
     
     fileinclude   = require('gulp-file-include')
 
-    sass          = require('gulp-sass'),
+var sass          = require('gulp-sass');
 
-    postcss       = require('gulp-postcss'),
-    autoprefixer  = require('autoprefixer'),
-    mqpacker      = require('css-mqpacker'),
+var postcss       = require('gulp-postcss');
+var autoprefixer  = require('autoprefixer');
+var mqpacker      = require('css-mqpacker');
 
 
-    spritesmith   = require('gulp.spritesmith'),
+var spritesmith   = require('gulp.spritesmith');
 
-    merge         = require('merge-stream'),
+var merge         = require('merge-stream');
 
-    browserSync   = require('browser-sync').create(),
-    reload        = browserSync.reload;
+var browserSync   = require('browser-sync').create();
+var reload        = browserSync.reload;
+
+
+var svgSprite     = require('gulp-svg-sprite'); 
 
 var minifyCss     = require('gulp-minify-css');
 
@@ -135,6 +138,34 @@ gulp.task('sprite', function () {
 });
 
 
+gulp.task('svg-sprite', function () {
+
+  gulp.src('./dev/static/i/svg/*.svg')
+    .pipe(svgSprite({
+      shape: {
+        spacing: {
+            padding: 2
+        }
+      },
+      mode: {
+        css: {
+          dest: '../',
+          sprite: "../i/sprite.css.svg",
+          prefix: '.svg-icon-%s',
+          render: {
+            scss: {
+              dest: "../scss/utils/_svg_sprite.scss"
+            }
+          }
+        }
+      }
+    }))
+    .pipe(gulp.dest('./dev/static/i/svg-sprite/'));
+
+});
+
+
+
 gulp.task('html', function () {
   
   gulp.src('./dev/html/partial/*.html')
@@ -169,7 +200,7 @@ gulp.task('css', function(){
 });
 
 
-gulp.task('serve', ['html', 'sprite', 'css'], function(){
+gulp.task('serve', ['html', 'sprite', 'svg-sprite', 'css'], function(){
   
   browserSync.init({
     notify: false,
@@ -182,7 +213,7 @@ gulp.task('serve', ['html', 'sprite', 'css'], function(){
 
   gulp.watch( path.dev.html, ['html']);
   
-  gulp.watch( [path.dev.scss, path.dev.scssIgnore], ['sprite', 'css']);
+  gulp.watch( [path.dev.scss, path.dev.scssIgnore], ['sprite', 'svg-sprite', 'css']);
   
   gulp.watch( path.dev.js, function(){
     reload();

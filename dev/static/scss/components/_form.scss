@@ -1,5 +1,8 @@
 .c-form {
   font-size: 16px;
+  @include adaptive-to($desktop-w){
+    font-size: 13px;
+  }
   &.form-horizontal {
     .row-label {
       float: left;
@@ -79,12 +82,15 @@
   height: 34px;
   line-height: 20px;
   padding: 7px 15px;
-  font: normal 14px Arial;
+  font: normal 14px 'museo_sans_cyr', Arial;
   border-radius: 3px;
   border: 1px solid #000;
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  * {
+    cursor: pointer;
+  }
   input {
     visibility: hidden;
     position: absolute;

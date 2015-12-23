@@ -8,12 +8,13 @@
   
   .member-name {
     font-size: 44px;
-    font-weight: bold;
+    font-weight: 900;
   }
   .member-position {
     color: #848a98;
     font-size: 12px;
     text-transform: uppercase;
+    margin-top: 5px;
     letter-spacing: 1px;
     margin-bottom: 20px;
   }
@@ -41,7 +42,7 @@
       overflow: hidden;
       font-size: 32px;
       line-height: 44px;
-      font-weight: bold;
+      font-weight: 900;
       border-bottom: 6px solid $color-firm-red;
       padding-bottom: 10px;
 

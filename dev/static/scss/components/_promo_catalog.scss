@@ -95,12 +95,18 @@
       .img-title {
         position: relative;
         z-index: 5;
+        font-weight: bold;
+        line-height: 50px;
         font-size: 28px;
         line-height: 36px;
-        font-weight: bold;
 
         @include adaptive-between($tablet-w, $desktop-w){
           width: 250px;
+        }
+
+        @include adaptive-from($desktop-wide-w){
+          font-size: 44px;
+          line-height: 50px;
         }
       }
 

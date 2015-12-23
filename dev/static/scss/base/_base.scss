@@ -91,7 +91,7 @@ a {
     content: '1 .column.size-1of1';
   }
 
-  @include adaptive-between($tablet-w, $desktop-wide-w){
+  @include adaptive-between($tablet-w - 150, $desktop-wide-w){
     content: '2 .column.size-1of2';
   }
 
@@ -204,7 +204,7 @@ body.show-nav {
   transition: transform .2s ease, opacity .2s ease;
 
   @include adaptive-to($desktop-w){
-    width: 320px;
+    width: 280px;
     position: fixed;
     top: 80px;
     right: 0;
@@ -428,25 +428,24 @@ body.show-nav {
         margin-top: 15px;
         @include adaptive-between($tablet-w, $desktop-w){        
           margin-top: 0;
-          margin-left: 40px;
+          margin-left: 30px;
         }
         @include adaptive-to($tablet-w){        
           margin-top: 0;
         }
       }
       &.active {
-        font-weight: bold;
+        font-weight: 900;
         a {
           color: $color-firm-red;
           border-color: transparent;
           @include adaptive-between($tablet-w, $desktop-w){
-            border-color: #e61235;
-            font-weight: bold;
+            //border-color: #e61235;
           }
         }
       }
       a {
-        border-bottom: 1px dashed #000;
+        border-bottom: 1px dashed currentColor;
         @include adaptive-between($tablet-w, $desktop-w){        
           display: block;
           padding-bottom: 15px;
@@ -470,8 +469,8 @@ body.show-nav {
   font-size: 44px;
   line-height: 1.2;
   margin-bottom: .5em;
-  font-weight: bold;
-
+  font-weight: 900;
+  padding-top: 10px;
 
   @include adaptive-to($tablet-w){
    font-size: 28px;

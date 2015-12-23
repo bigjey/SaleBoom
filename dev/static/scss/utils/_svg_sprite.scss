@@ -1,0 +1,54 @@
+%svg-common {
+	background: url("../i/sprite.css-aa5f6cd3.svg") no-repeat;
+}
+
+.svg-icon-nav-collapse {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-icon-nav-collapse-dims {
+	width: 16px;
+	height: 17px;
+}
+
+.svg-icon-nav-expand {
+	@extend %svg-common;
+	background-position: 40% 100%;
+}
+
+.svg-icon-nav-expand-dims {
+	width: 16px;
+	height: 17px;
+}
+
+.svg-icon-remaining {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-icon-remaining-dims {
+	width: 20px;
+	height: 21px;
+}
+
+.svg-icon-star {
+	@extend %svg-common;
+	background-position: 52.63157894736842% 0;
+}
+
+.svg-icon-star-dims {
+	width: 18px;
+	height: 20px;
+}
+
+.svg-icon-star-full {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-icon-star-full-dims {
+	width: 18px;
+	height: 19px;
+}
+

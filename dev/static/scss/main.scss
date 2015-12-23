@@ -6,6 +6,8 @@
 @import 'utils/sprite';
 @include sprites($spritesheet-sprites);
 
+@import 'utils/svg_sprite';
+
 @import 'base/base';
 
 @import 'components/promo_carousel';

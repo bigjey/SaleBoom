@@ -45,7 +45,7 @@
           display: none;
           margin-bottom: 20px;
           @extend .clearfix;
-          @include adaptive-to($desktop-wide-w){
+          @include adaptive-to($desktop-w){
             display: block;
           }
 
@@ -98,12 +98,14 @@
         }
         .tabs-content {
           @extend .clearfix;
+          font-size: 0;
           .tab {
             display: inline-block;
             vertical-align: top;
             width: 33%;
-            padding-right: 25px;
-            @include adaptive-to($desktop-wide-w){
+            padding-right: 35px;
+            font-size: 14px;
+            @include adaptive-to($desktop-w){
               display: none;
               width: auto;
               &.active {
@@ -116,7 +118,7 @@
               letter-spacing: 1px;
               color: #999;
               margin-bottom: 20px;
-              @include adaptive-to($desktop-wide-w){
+              @include adaptive-to($desktop-w){
                 display: none;           
               }
               .count {
