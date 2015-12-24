@@ -16,6 +16,7 @@
     "jquery": "~2.1.4",
     "sly": "~1.6.1",
     "normalize-css": "normalize.css#~3.0.3",
-    "salvattore": "~1.0.9"
+    "salvattore": "~1.0.9",
+    "imagesloaded": "~3.2.0"
   }
 }

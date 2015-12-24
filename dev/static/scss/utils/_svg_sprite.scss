@@ -1,10 +1,30 @@
 %svg-common {
-	background: url("../i/sprite.css-aa5f6cd3.svg") no-repeat;
+	background: url("../i/sprite.css-76694a21.svg") no-repeat;
+}
+
+.svg-icon-login {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-icon-login-dims {
+	width: 21px;
+	height: 19px;
+}
+
+.svg-icon-login-hover {
+	@extend %svg-common;
+	background-position: 53.84615384615385% 0;
+}
+
+.svg-icon-login-hover-dims {
+	width: 21px;
+	height: 19px;
 }
 
 .svg-icon-nav-collapse {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 95.45454545454545% 47.5%;
 }
 
 .svg-icon-nav-collapse-dims {
@@ -14,7 +34,7 @@
 
 .svg-icon-nav-expand {
 	@extend %svg-common;
-	background-position: 40% 100%;
+	background-position: 0 100%;
 }
 
 .svg-icon-nav-expand-dims {
@@ -24,7 +44,7 @@
 
 .svg-icon-remaining {
 	@extend %svg-common;
-	background-position: 0 0;
+	background-position: 0 52.77777777777778%;
 }
 
 .svg-icon-remaining-dims {
@@ -34,7 +54,7 @@
 
 .svg-icon-star {
 	@extend %svg-common;
-	background-position: 52.63157894736842% 0;
+	background-position: 47.61904761904762% 51.351351351351354%;
 }
 
 .svg-icon-star-dims {

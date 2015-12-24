@@ -39,7 +39,10 @@
     }
 
     .favorites {
-      padding-top: 40px;
+      margin-top: 20px;
+      @include adaptive-to($desktop-w){
+        display: block;
+      }
       .tabs {
         .tabs-nav {
           display: none;
@@ -139,10 +142,12 @@
           + li {
             margin-top: 15px;
           }
-          .icon {
+          .star-icon {
             position: absolute;
             left: 0;
             top: 0;
+            @include svg-icon('star-full');
+            cursor: pointer;
           }
         }
       }

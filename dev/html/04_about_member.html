@@ -5,282 +5,391 @@
   @@include('./partial/_head.html')
 
 </head>
-<body>
-
+<body class="hide-mobile-search hide-mobile-slogan">
   
-  <div class="l-header">
-    <div class="wrap">
-      
-      <div class="logo">
+  <div class="layout">
+  
+    <div class="l-header">
+      <div class="wrap">
+        
+        <div class="logo">
 
-        <div class="img">
-          <a href=""><i class="icon icon-logo"></i><i class="icon icon-logo-mobile"></i></a>
+          <div class="img">
+            <a href=""><i class="icon icon-logo"></i><i class="icon icon-logo-mobile"></i></a>
+          </div>
+
+          <div class="slogan">
+            <div class="big">Все скидки здесь!</div>
+            <div class="small">Бесплатно!</div>
+          </div>
+
         </div>
 
-        <div class="slogan">
-          <div class="big">Все скидки здесь!</div>
-          <div class="small">Бесплатно!</div>
+        <div class="page-title">О проекте</div>
+
+        <div class="search">
+          <div class="input">
+            <form action="">
+              <input type="text" placeholder="Поиск">
+              <input type="submit" value="Найти">
+            </form>
+            <div class="results">
+              <ul>
+                <li><a href=""><span>8</span> акицй по запросу &laquo;Zara&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="example">
+            например: обувь, Zara, ночь скидок
+          </div>
         </div>
 
-      </div>
-
-      <div class="page-title">О проекте</div>
-
-      <div class="search">
-        <div class="input">
-          <form action="">
-            <input type="text" placeholder="Поиск">
-            <input type="submit" value="Найти">
-          </form>
-          <div class="results">
+        <div class="city">
+          <a href="" class="trigger"><span class="dashed">Алматы</span> <span class="font-icon">{</span></a>
+          <div class="dropdown">
             <ul>
-              <li><a href=""><span>8</span> акицй по запросу &laquo;Zara&raquo;</a></li>
+              <li class="active"><a href="">Алматы <span class="count">3 462 </span></a></li>
+              <li><a href="">Астана <span class="count">1 342 </span></a></li>
+              <li><a href="">Шымкент <span class="count">112 </span></a></li>
+              <li><a href="">Павлодар <span class="count">34</span></a></li>
+              <li><a href="">Петропавлоск <span class="count">34 </span></a></li>
+              <li class="disabled"><a href="">Павлодар <span class="count">0</span></a></li>
+              <li><a href="">Костанай <span class="count">2</span></a></li>
+              <li><a href="">Кокшетау <span class="count">13</span></a></li>
+              <li><a href="">Атырау <span class="count">54 </span></a></li>
+              <li><a href="">Тараз <span class="count">76 </span></a></li>
             </ul>
           </div>
         </div>
-        <div class="example">
-          например: обувь, Zara, ночь скидок
-        </div>
-      </div>
 
-      <div class="city">
-        <a href="" class="trigger"><span class="dashed">Алматы</span> <span class="font-icon">{</span></a>
-        <div class="dropdown">
-          <ul>
-            <li class="active"><a href="">Алматы <span class="count">3 462 </span></a></li>
-            <li><a href="">Астана <span class="count">1 342 </span></a></li>
-            <li><a href="">Шымкент <span class="count">112 </span></a></li>
-            <li><a href="">Павлодар <span class="count">34</span></a></li>
-            <li><a href="">Петропавлоск <span class="count">34 </span></a></li>
-            <li class="disabled"><a href="">Павлодар <span class="count">0</span></a></li>
-            <li><a href="">Костанай <span class="count">2</span></a></li>
-            <li><a href="">Кокшетау <span class="count">13</span></a></li>
-            <li><a href="">Атырау <span class="count">54 </span></a></li>
-            <li><a href="">Тараз <span class="count">76 </span></a></li>
-          </ul>
-        </div>
-      </div>
+        <div class="auth">
 
-      <div class="auth">
-
-        <div class="loginned">
-          <a href="" class="user">
-            <span class="img">
-              <img src="../tmp/avatar.png" alt="">
+          <div class="loginned">
+            <a href="" class="user">
+              <span class="img">
+                <img src="../tmp/avatar.png" alt="">
+              </span>
+              <span class="name">
+                Марина Д.
+              </span>
+            </a>
+            <span class="logout">            
+              <a href="">Выйти <i class="icon icon-login"></i></a>
             </span>
-            <span class="name">
-              Марина Д.
-            </span>
-          </a>
-          <span class="logout">            
-            <a href="">Выйти <i class="icon icon-login"></i></a>
-          </span>
+          </div>
+
+
+          <!-- <a href="" class="login" data-action="show-auth" data-auth-tab="login">Вход <i class="icon icon-login"></i></a>
+          <span class="divider"></span>
+          <a href="" class="register" data-action="show-auth" data-auth-tab="register">Регистрация</a> -->
+
         </div>
 
-
-        <!-- <a href="" class="login" data-action="show-auth" data-auth-tab="login">Вход <i class="icon icon-login"></i></a>
-        <span class="divider"></span>
-        <a href="" class="register" data-action="show-auth" data-auth-tab="register">Регистрация</a> -->
-
-      </div>
-
-      <a href="" class="hamburger-icon" data-action="show-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-
-    </div>
-  </div>
-
-  <div class="l-content wrap">
-
-    <div class="l-sidebar sidebar-inner" >
-
-      <div class="sidebar-in">
-      
-        <a href="" class="hamburger-icon" data-action="hide-nav">
+        <a href="" class="hamburger-icon" data-action="show-nav">
           <span></span>
           <span></span>
           <span></span>
         </a>
 
-        <div class="sidebar-top">
+      </div>
+    </div>
 
-          <div class="auth">
+    <div class="l-content wrap">
 
-            <!-- <div class="loginned">
-              <div href="" class="user">
-                <a href="">
-                  <span class="img">
-                    <img src="../tmp/avatar.png" alt="">
-                  </span>
-                  <span class="name">
-                    Марина Д.
-                  </span>  
-                </a>          
-                <span class="logout">            
-                  <a href="">Выйти</a>
-                </span>
+      <div class="l-sidebar sidebar-inner" >
+
+        <div class="sidebar-in">
+        
+          <a href="" class="hamburger-icon" data-action="hide-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="tabs">
+
+            <div class="sidebar-top">
+
+              <div class="auth">
+
+                <!-- <div class="loginned">
+                  <div href="" class="user">
+                    <a href="">
+                      <span class="img">
+                        <img src="../tmp/avatar.png" alt="">
+                      </span>
+                      <span class="name">
+                        Марина Д.
+                      </span>  
+                    </a>          
+                    <span class="logout">            
+                      <a href="">Выйти</a>
+                    </span>
+                  </div>
+                </div> -->
+
+
+                <div class="actions">
+                  <a href="" class="login" data-action="show-auth" data-auth-tab="login">Вход</a>
+                  <a href="" class="register" data-action="show-auth" data-auth-tab="register">Регистрация</a>
+                </div>
+
               </div>
-            </div> -->
 
 
-            <div class="actions">
-              <a href="" class="login" data-action="show-auth" data-auth-tab="login">Вход</a>
-              <a href="" class="register" data-action="show-auth" data-auth-tab="register">Регистрация</a>
+              <div class="switcher tabs-nav">
+                <a href="" class="active">ТОВАРЫ</a>
+                <a href="">УСЛУГИ</a>
+              </div>
+            
+            </div>
+            
+            <div class="nav" id="categories-nav">
+              <div class="tab active">
+                
+                <div class="lvl-1">
+                  <ul>
+                    <li class="open">
+                      <a href="">Одежда<span class="count">89</span></a>
+                      <div class="lvl-2">
+                      <ul>
+                        <li class="open favorite">
+                          <a href="">Для мужчин <span class="expand-icon"></span> <span class="star-icon"></span></a>
+
+                          <div class="lvl-3">
+                            <ul>
+                              <li class="favorite"><a href="">Верхняя одежда<span class="count">3</span> <span class="star-icon"></span></a></li>
+                              <li class="favorite"><a href="">Рубашки<span class="count">3</span> <span class="star-icon"></span></a></li>
+                              <li><a href="">Толстовки и джемперы<span class="count">7</span> <span class="star-icon"></span></a></li>
+                              <li><a href="">Костюмы<span class="count">9</span> <span class="star-icon"></span></a></li>
+                              <li><a href="">Джинсы и брюки<span class="count">0</span> <span class="star-icon"></span></a></li>
+                              <li><a href="">Аксессуары<span class="count">1</span> <span class="star-icon"></span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a href="">Для женщин <span class="expand-icon"></span></a>
+                        </li>
+                        <li>
+                          <a href="">Для детей <span class="expand-icon"></span></a>
+                        </li>
+                      </ul>
+                      </div>
+                    </li>
+                    <li class="">
+                      <a href="">Электроника<span class="count">89</span></a>
+
+                      <div class="lvl-2">
+                        <ul>
+                          <li class="">
+                            <a href="">Компьютеры <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">ПК<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Ноутбуки<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Оборудование<span class="count">7</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="">
+                            <a href="">Мобильные <span class="expand-icon"></span></a>
+
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Телефоны<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Смартфоны<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Аксессуары<span class="count">7</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="">
+                            <a href="">Для дома <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Бытовая техника<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">ТВ, аудио, видео<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Фотоаппараты<span class="count">7</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Красота, здоровье<span class="count">9</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="">Авто<span class="count">89</span></a>
+                      <div class="lvl-2">
+                        <ul>
+                          <li>
+                            <a href="">Для себя <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Автомобили<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Мотоциклы<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Запчасти<span class="count">7</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Аксессуары<span class="count">9</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="">Спецтехника <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Машины<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Запчасти<span class="count">3</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="">Спорттовары<span class="count">89</span></a>
+                    </li>
+                    <li>
+                      <a href="">Развлечения<span class="count">89</span></a>
+                    </li>
+                    <li>
+                      <a href="">Рестораны<span class="count">89</span></a>
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
+              <div class="tab">
+                
+                <div class="lvl-1">
+                  <ul>
+                    <li class="">
+                      <a href="">Электроника<span class="count">89</span></a>
+
+                      <div class="lvl-2">
+                        <ul>
+                          <li class="">
+                            <a href="">Компьютеры <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">ПК<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Ноутбуки<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Оборудование<span class="count">7</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="">
+                            <a href="">Мобильные <span class="expand-icon"></span></a>
+
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Телефоны<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Смартфоны<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Аксессуары<span class="count">7</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="">
+                            <a href="">Для дома <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Бытовая техника<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">ТВ, аудио, видео<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Фотоаппараты<span class="count">7</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Красота, здоровье<span class="count">9</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="">Авто<span class="count">89</span></a>
+                      <div class="lvl-2">
+                        <ul>
+                          <li>
+                            <a href="">Для себя <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Автомобили<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Мотоциклы<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Запчасти<span class="count">7</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Аксессуары<span class="count">9</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="">Спецтехника <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Машины<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Запчасти<span class="count">3</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="">Спорттовары<span class="count">89</span></a>
+                    </li>
+                    <li>
+                      <a href="">Развлечения<span class="count">89</span></a>
+                    </li>
+                    <li>
+                      <a href="">Рестораны<span class="count">89</span></a>
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
             </div>
 
           </div>
-
-
-          <div class="switcher">
-            <a href="" class="active">ТОВАРЫ</a>
-            <a href="">УСЛУГИ</a>
-          </div>
-        
-        </div>
-        
-        <div class="nav">
           
-          <ul class="lvl-1">
-            <li>
-              <a href="">Одежда<span class="count">89</span></a>
-
-              <ul class="lvl-2">
-                <li class="open">
-                  <a href="">Для мужчин</a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">Верхняя одежда<span class="count">3</span></a></li>
-                    <li><a href="">Рубашки<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Толстовки и джемперы<span class="count">7</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Костюмы<span class="count">9</span></a></li>
-                    <li><a href="">Джинсы и брюки<span class="count">0</span></a></li>
-                    <li><a href="">Аксессуары<span class="count">1</span></a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="">Для женщин<span class="star"><i class="icon icon-star-empty"></i></span></a>
-                </li>
-                <li>
-                  <a href="">Для детей<span class="star"><i class="icon icon-star-empty"></i></span></a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="">Электроника<span class="count">89</span></a>
-
-              <ul class="lvl-2">
-                <li class="open">
-                  <a href="">Компьютеры</a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">ПК<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Ноутбуки<span class="count">3</span></a></li>
-                    <li><a href="">Оборудование<span class="count">7</span></a></li>
-                  </ul>
-                </li>
-                <li class="open">
-                  <a href="">Мобильные</a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">Телефоны<span class="count">3</span></a></li>
-                    <li><a href="">Смартфоны<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Аксессуары<span class="count">7</span></a></li>
-                  </ul>
-                </li>
-                <li class="open">
-                  <a href="">Для дома</a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">Бытовая техника<span class="count">3</span></a></li>
-                    <li><a href="">ТВ, аудио, видео<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Фотоаппараты<span class="count">7</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Красота, здоровье<span class="count">9</span></a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="">Авто<span class="count">89</span> <span class="star"><i class="icon icon-star-full"></i></span></a>
-
-              <ul class="lvl-2">
-                <li class="open">
-                  <a href="">Для себя<span class="star"><i class="icon icon-star-full"></i></span></a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">Автомобили<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Мотоциклы<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Запчасти<span class="count">7</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Аксессуары<span class="count">9</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                  </ul>
-                </li>
-                <li class="open">
-                  <a href="">Спецтехника<span class="star"><i class="icon icon-star-full"></i></span></a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">Машины<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Запчасти<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="">Спорттовары<span class="count">89</span> <span class="star"><i class="icon icon-star-empty"></i></span></a>
-            </li>
-            <li>
-              <a href="">Развлечения<span class="count">89</span> <span class="star"><i class="icon icon-star-empty"></i></span></a>
-            </li>
-            <li>
-              <a href="">Рестораны<span class="count">89</span> <span class="star"><i class="icon icon-star-empty"></i></span></a>
-            </li>
-          </ul>
-
-        </div>
-        
-        <div class="ad-box">
-          <a href=""><img src="../tmp/ad-1.png" alt=""></a>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="p-about-member">
-
-      <div class="page-side-nav">
-        <ul>
-          <li class="active"><a href="">О проекте</a></li>
-          <li><a href="">Как это работает</a></li>
-          <li><a href="">Рекламодателям</a></li>
-          <li><a href="">Оставить отзыв</a></li>
-          <li><a href="">Контакты</a></li>
-        </ul>          
-      </div>
-
-      <div class="page-content-push-right">
-      
-        <div class="member-name">Ахмед Мехмед</div>
-        
-        <div class="member-position">ЛОКОМОТИВ ПРОЕКТА</div>
-        
-        <div class="member-quote">
-          <div class="quote-img">
-            <img src="../tmp/member-quote.jpg" alt="">
+          <div class="ad-box">
+            <a href=""><img src="../tmp/ad-1.png" alt=""></a>
           </div>
-          <div class="quote-text">«ЕСЛИ ГОРА НЕ ИДЕТ К МАГОМЕДУ, ТО МАГОМЕД ИДЕТ К ГОРЕ»</div>
+
         </div>
 
-        <div class="article">
-          <p>Окончательно решил до конца жизни учить французский язык. К приоритетному серому цвету добавились ещё два – темно-серый и светло-серый. Шутить почти перестал, вместо этого громко смеется шуткам программного директора Влада Микеева в жанре «черный юмор».</p>
-          <p>В связи с изменением политической обстановки в стране перестал носить майку со сложночитаемым словом х… и вместо этого иногда носит белый значок.</p>
-          <p>К часам, машинам, рыбалке, футболу, хоккею, бане и пиву совершенно равнодушен. Мечтает чтобы не было необходимости заменить собой любого сотрудника радиостанции. Не любит: невнятных ответов на любые вопросы и когда щелкают ручкой. </p>
+      </div>
+
+      <div class="p-about-member">
+
+        <div class="page-side-nav">
+          <ul>
+            <li class="active"><a href="">О проекте</a></li>
+            <li><a href="">Как это работает</a></li>
+            <li><a href="">Рекламодателям</a></li>
+            <li><a href="">Оставить отзыв</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>          
+        </div>
+
+        <div class="page-content-push-right">
+        
+          <div class="member-name">Ахмед Мехмед</div>
+          
+          <div class="member-position">ЛОКОМОТИВ ПРОЕКТА</div>
+          
+          <div class="member-quote">
+            <div class="quote-img">
+              <img src="../tmp/member-quote.jpg" alt="">
+            </div>
+            <div class="quote-text">«ЕСЛИ ГОРА НЕ ИДЕТ К МАГОМЕДУ, ТО МАГОМЕД ИДЕТ К ГОРЕ»</div>
+          </div>
+
+          <div class="article">
+            <p>Окончательно решил до конца жизни учить французский язык. К приоритетному серому цвету добавились ещё два – темно-серый и светло-серый. Шутить почти перестал, вместо этого громко смеется шуткам программного директора Влада Микеева в жанре «черный юмор».</p>
+            <p>В связи с изменением политической обстановки в стране перестал носить майку со сложночитаемым словом х… и вместо этого иногда носит белый значок.</p>
+            <p>К часам, машинам, рыбалке, футболу, хоккею, бане и пиву совершенно равнодушен. Мечтает чтобы не было необходимости заменить собой любого сотрудника радиостанции. Не любит: невнятных ответов на любые вопросы и когда щелкают ручкой. </p>
+          </div>
+
         </div>
 
       </div>
 
     </div>
+
+    <div class="footer-placeholder"></div>
 
   </div>
 
@@ -319,7 +428,7 @@
 
   <div class="popup-overlay" data-action="hide-auth"></div>
 
-  <div class="auth-popup">
+  <div class="l-auth-popup">
     
     <div class="popup-in">
 

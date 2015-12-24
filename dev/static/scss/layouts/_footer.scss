@@ -1,14 +1,26 @@
 .l-footer {
   background: #efefef;
+  margin-top: -80px;
+
+  @include adaptive-between($tablet-w, $desktop-wide-w) {
+    margin-top: -125px;
+  }
 
   > .wrap {
     @extend .clearfix;
+
+    height: 80px;
 
     position: relative;
     padding: 30px 30px;
 
     @include adaptive-between($tablet-w, $desktop-wide-w) {
+      height: 125px;
       padding-top: 45px + 30px;
+    }
+
+    @include adaptive-to($tablet-w){
+      height: auto;
     }
 
     
@@ -145,4 +157,11 @@
 
   }
 
+}
+
+.footer-placeholder {
+  height: 80px;
+  @include adaptive-between($tablet-w, $desktop-wide-w) {
+    height: 125px;
+  } 
 }

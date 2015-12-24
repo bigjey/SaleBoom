@@ -6,6 +6,7 @@
 
 <title>Saleboom</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- build:css ../static/css/vendors.css -->
 <link rel="stylesheet" href="../../bower_components/normalize-css/normalize.css" />
@@ -14,396 +15,583 @@
 <link rel="stylesheet" href="../static/css/main.css">
 
 </head>
-<body>
-
+<body class="hide-mobile-search hide-mobile-slogan">
   
-  <div class="l-header">
-    <div class="wrap">
-      
-      <div class="logo">
+  <div class="layout">
+  
+    <div class="l-header">
+      <div class="wrap">
+        
+        <div class="logo">
 
-        <div class="img">
-          <a href=""><i class="icon icon-logo"></i><i class="icon icon-logo-mobile"></i></a>
+          <div class="img">
+            <a href=""><i class="icon icon-logo"></i><i class="icon icon-logo-mobile"></i></a>
+          </div>
+
+          <div class="slogan">
+            <div class="big">Все скидки здесь!</div>
+            <div class="small">Бесплатно!</div>
+          </div>
+
         </div>
 
-        <div class="slogan">
-          <div class="big">Все скидки здесь!</div>
-          <div class="small">Бесплатно!</div>
+        <div class="page-title">Услуги: Туризм</div>
+
+        <div class="search">
+          <div class="input">
+            <form action="">
+              <input type="text" placeholder="Поиск">
+              <input type="submit" value="Найти">
+            </form>
+            <div class="results">
+              <ul>
+                <li><a href=""><span>8</span> акицй по запросу &laquo;Zara&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="example">
+            например: обувь, Zara, ночь скидок
+          </div>
         </div>
 
-      </div>
-
-      <div class="page-title">Услуги: Туризм</div>
-
-      <div class="search">
-        <div class="input">
-          <form action="">
-            <input type="text" placeholder="Поиск">
-            <input type="submit" value="Найти">
-          </form>
-          <div class="results">
+        <div class="city">
+          <a href="" class="trigger"><span class="dashed">Алматы</span> <span class="font-icon">{</span></a>
+          <div class="dropdown">
             <ul>
-              <li><a href=""><span>8</span> акицй по запросу &laquo;Zara&raquo;</a></li>
+              <li class="active"><a href="">Алматы <span class="count">3 462 </span></a></li>
+              <li><a href="">Астана <span class="count">1 342 </span></a></li>
+              <li><a href="">Шымкент <span class="count">112 </span></a></li>
+              <li><a href="">Павлодар <span class="count">34</span></a></li>
+              <li><a href="">Петропавлоск <span class="count">34 </span></a></li>
+              <li class="disabled"><a href="">Павлодар <span class="count">0</span></a></li>
+              <li><a href="">Костанай <span class="count">2</span></a></li>
+              <li><a href="">Кокшетау <span class="count">13</span></a></li>
+              <li><a href="">Атырау <span class="count">54 </span></a></li>
+              <li><a href="">Тараз <span class="count">76 </span></a></li>
             </ul>
           </div>
         </div>
-        <div class="example">
-          например: обувь, Zara, ночь скидок
-        </div>
-      </div>
 
-      <div class="city">
-        <a href="" class="trigger"><span class="dashed">Алматы</span> <span class="font-icon">{</span></a>
-        <div class="dropdown">
-          <ul>
-            <li class="active"><a href="">Алматы <span class="count">3 462 </span></a></li>
-            <li><a href="">Астана <span class="count">1 342 </span></a></li>
-            <li><a href="">Шымкент <span class="count">112 </span></a></li>
-            <li><a href="">Павлодар <span class="count">34</span></a></li>
-            <li><a href="">Петропавлоск <span class="count">34 </span></a></li>
-            <li class="disabled"><a href="">Павлодар <span class="count">0</span></a></li>
-            <li><a href="">Костанай <span class="count">2</span></a></li>
-            <li><a href="">Кокшетау <span class="count">13</span></a></li>
-            <li><a href="">Атырау <span class="count">54 </span></a></li>
-            <li><a href="">Тараз <span class="count">76 </span></a></li>
-          </ul>
-        </div>
-      </div>
+        <div class="auth">
 
-      <div class="auth">
-
-        <div class="loginned">
-          <a href="" class="user">
-            <span class="img">
-              <img src="../tmp/avatar.png" alt="">
+          <div class="loginned">
+            <a href="" class="user">
+              <span class="img">
+                <img src="../tmp/avatar.png" alt="">
+              </span>
+              <span class="name">
+                Марина Д.
+              </span>
+            </a>
+            <span class="logout">            
+              <a href="">Выйти <i class="icon icon-login"></i></a>
             </span>
-            <span class="name">
-              Марина Д.
-            </span>
-          </a>
-          <span class="logout">            
-            <a href="">Выйти <i class="icon icon-login"></i></a>
-          </span>
+          </div>
+
+
+          <!-- <a href="" class="login" data-action="show-auth" data-auth-tab="login">Вход <i class="icon icon-login"></i></a>
+          <span class="divider"></span>
+          <a href="" class="register" data-action="show-auth" data-auth-tab="register">Регистрация</a> -->
+
         </div>
 
-
-        <!-- <a href="" class="login" data-action="show-auth" data-auth-tab="login">Вход <i class="icon icon-login"></i></a>
-        <span class="divider"></span>
-        <a href="" class="register" data-action="show-auth" data-auth-tab="register">Регистрация</a> -->
-
-      </div>
-
-      <a href="" class="hamburger-icon" data-action="show-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-
-    </div>
-  </div>
-
-  <div class="l-content wrap extra-padding">
-      
-    <div class="l-sidebar" >
-
-      <div class="sidebar-in">
-
-        <a href="" class="hamburger-icon" data-action="hide-nav">
+        <a href="" class="hamburger-icon" data-action="show-nav">
           <span></span>
           <span></span>
           <span></span>
         </a>
 
-        <div class="sidebar-top">
+      </div>
+    </div>
 
-          <div class="auth">
+    <div class="l-content wrap extra-padding">
+        
+      <div class="l-sidebar sidebar-inner" >
 
-            <div class="loginned">
-              <div href="" class="user">
-                <a href="">
-                  <span class="img">
-                    <img src="../tmp/avatar.png" alt="">
-                  </span>
-                  <span class="name">
-                    Марина Д.
-                  </span>  
-                </a>          
-                <span class="logout">            
-                  <a href="">Выйти</a>
-                </span>
+        <div class="sidebar-in">
+        
+          <a href="" class="hamburger-icon" data-action="hide-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="tabs">
+
+            <div class="sidebar-top">
+
+              <div class="auth">
+
+                <!-- <div class="loginned">
+                  <div href="" class="user">
+                    <a href="">
+                      <span class="img">
+                        <img src="../tmp/avatar.png" alt="">
+                      </span>
+                      <span class="name">
+                        Марина Д.
+                      </span>  
+                    </a>          
+                    <span class="logout">            
+                      <a href="">Выйти</a>
+                    </span>
+                  </div>
+                </div> -->
+
+
+                <div class="actions">
+                  <a href="" class="login" data-action="show-auth" data-auth-tab="login">Вход</a>
+                  <a href="" class="register" data-action="show-auth" data-auth-tab="register">Регистрация</a>
+                </div>
+
+              </div>
+
+
+              <div class="switcher tabs-nav">
+                <a href="" class="active">ТОВАРЫ</a>
+                <a href="">УСЛУГИ</a>
+              </div>
+            
+            </div>
+            
+            <div class="nav" id="categories-nav">
+              <div class="tab active">
+                
+                <div class="lvl-1">
+                  <ul>
+                    <li class="open">
+                      <a href="">Одежда<span class="count">89</span></a>
+                      <div class="lvl-2">
+                      <ul>
+                        <li class="open favorite">
+                          <a href="">Для мужчин <span class="expand-icon"></span> <span class="star-icon"></span></a>
+
+                          <div class="lvl-3">
+                            <ul>
+                              <li class="favorite"><a href="">Верхняя одежда<span class="count">3</span> <span class="star-icon"></span></a></li>
+                              <li class="favorite"><a href="">Рубашки<span class="count">3</span> <span class="star-icon"></span></a></li>
+                              <li><a href="">Толстовки и джемперы<span class="count">7</span> <span class="star-icon"></span></a></li>
+                              <li><a href="">Костюмы<span class="count">9</span> <span class="star-icon"></span></a></li>
+                              <li><a href="">Джинсы и брюки<span class="count">0</span> <span class="star-icon"></span></a></li>
+                              <li><a href="">Аксессуары<span class="count">1</span> <span class="star-icon"></span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a href="">Для женщин <span class="expand-icon"></span></a>
+                        </li>
+                        <li>
+                          <a href="">Для детей <span class="expand-icon"></span></a>
+                        </li>
+                      </ul>
+                      </div>
+                    </li>
+                    <li class="">
+                      <a href="">Электроника<span class="count">89</span></a>
+
+                      <div class="lvl-2">
+                        <ul>
+                          <li class="">
+                            <a href="">Компьютеры <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">ПК<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Ноутбуки<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Оборудование<span class="count">7</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="">
+                            <a href="">Мобильные <span class="expand-icon"></span></a>
+
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Телефоны<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Смартфоны<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Аксессуары<span class="count">7</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="">
+                            <a href="">Для дома <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Бытовая техника<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">ТВ, аудио, видео<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Фотоаппараты<span class="count">7</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Красота, здоровье<span class="count">9</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="">Авто<span class="count">89</span></a>
+                      <div class="lvl-2">
+                        <ul>
+                          <li>
+                            <a href="">Для себя <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Автомобили<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Мотоциклы<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Запчасти<span class="count">7</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Аксессуары<span class="count">9</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="">Спецтехника <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Машины<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Запчасти<span class="count">3</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="">Спорттовары<span class="count">89</span></a>
+                    </li>
+                    <li>
+                      <a href="">Развлечения<span class="count">89</span></a>
+                    </li>
+                    <li>
+                      <a href="">Рестораны<span class="count">89</span></a>
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
+              <div class="tab">
+                
+                <div class="lvl-1">
+                  <ul>
+                    <li class="">
+                      <a href="">Электроника<span class="count">89</span></a>
+
+                      <div class="lvl-2">
+                        <ul>
+                          <li class="">
+                            <a href="">Компьютеры <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">ПК<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Ноутбуки<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Оборудование<span class="count">7</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="">
+                            <a href="">Мобильные <span class="expand-icon"></span></a>
+
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Телефоны<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Смартфоны<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Аксессуары<span class="count">7</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="">
+                            <a href="">Для дома <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Бытовая техника<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">ТВ, аудио, видео<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Фотоаппараты<span class="count">7</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Красота, здоровье<span class="count">9</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="">Авто<span class="count">89</span></a>
+                      <div class="lvl-2">
+                        <ul>
+                          <li>
+                            <a href="">Для себя <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Автомобили<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Мотоциклы<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Запчасти<span class="count">7</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Аксессуары<span class="count">9</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="">Спецтехника <span class="expand-icon"></span></a>
+                            <div class="lvl-3">
+                              <ul>
+                                <li><a href="">Машины<span class="count">3</span> <span class="star-icon"></span></a></li>
+                                <li><a href="">Запчасти<span class="count">3</span> <span class="star-icon"></span></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="">Спорттовары<span class="count">89</span></a>
+                    </li>
+                    <li>
+                      <a href="">Развлечения<span class="count">89</span></a>
+                    </li>
+                    <li>
+                      <a href="">Рестораны<span class="count">89</span></a>
+                    </li>
+                  </ul>
+                </div>
+                
               </div>
             </div>
 
-
-            <!-- <div class="actions">
-              <a href="" class="login" data-action="show-auth" data-auth-tab="login">Вход</a>
-              <a href="" class="register" data-action="show-auth" data-auth-tab="register">Регистрация</a>
-            </div> -->
-
           </div>
-
-
-          <div class="switcher">
-            <a href="" class="active">ТОВАРЫ</a>
-            <a href="">УСЛУГИ</a>
-          </div>
-        
-        </div>
-        
-        <div class="nav">
           
-          <ul class="lvl-1">
-            <li>
-              <a href="">Одежда<span class="count">89</span></a>
+          <div class="ad-box">
+            <a href=""><img src="../tmp/ad-1.png" alt=""></a>
+          </div>
 
-              <ul class="lvl-2">
-                <li class="open">
-                  <a href="">Для мужчин</a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">Верхняя одежда<span class="count">3</span></a></li>
-                    <li><a href="">Рубашки<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Толстовки и джемперы<span class="count">7</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Костюмы<span class="count">9</span></a></li>
-                    <li><a href="">Джинсы и брюки<span class="count">0</span></a></li>
-                    <li><a href="">Аксессуары<span class="count">1</span></a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="">Для женщин<span class="star"><i class="icon icon-star-empty"></i></span></a>
-                </li>
-                <li>
-                  <a href="">Для детей<span class="star"><i class="icon icon-star-empty"></i></span></a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="">Электроника<span class="count">89</span></a>
-
-              <ul class="lvl-2">
-                <li class="open">
-                  <a href="">Компьютеры</a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">ПК<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Ноутбуки<span class="count">3</span></a></li>
-                    <li><a href="">Оборудование<span class="count">7</span></a></li>
-                  </ul>
-                </li>
-                <li class="open">
-                  <a href="">Мобильные</a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">Телефоны<span class="count">3</span></a></li>
-                    <li><a href="">Смартфоны<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Аксессуары<span class="count">7</span></a></li>
-                  </ul>
-                </li>
-                <li class="open">
-                  <a href="">Для дома</a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">Бытовая техника<span class="count">3</span></a></li>
-                    <li><a href="">ТВ, аудио, видео<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Фотоаппараты<span class="count">7</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Красота, здоровье<span class="count">9</span></a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="">Авто<span class="count">89</span> <span class="star"><i class="icon icon-star-full"></i></span></a>
-
-              <ul class="lvl-2">
-                <li class="open">
-                  <a href="">Для себя<span class="star"><i class="icon icon-star-full"></i></span></a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">Автомобили<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Мотоциклы<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Запчасти<span class="count">7</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Аксессуары<span class="count">9</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                  </ul>
-                </li>
-                <li class="open">
-                  <a href="">Спецтехника<span class="star"><i class="icon icon-star-full"></i></span></a>
-
-                  <ul class="lvl-3">
-                    <li><a href="">Машины<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                    <li><a href="">Запчасти<span class="count">3</span> <span class="star"><i class="icon icon-star-full"></i></span></a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="">Спорттовары<span class="count">89</span> <span class="star"><i class="icon icon-star-empty"></i></span></a>
-            </li>
-            <li>
-              <a href="">Развлечения<span class="count">89</span> <span class="star"><i class="icon icon-star-empty"></i></span></a>
-            </li>
-            <li>
-              <a href="">Рестораны<span class="count">89</span> <span class="star"><i class="icon icon-star-empty"></i></span></a>
-            </li>
-          </ul>
-
-        </div>
-        
-        <div class="ad-box">
-          <a href=""><img src="../tmp/ad-1.png" alt=""></a>
         </div>
 
       </div>
 
-    </div>
+      <div class="l-content-main">
 
-    <div class="l-content-main">
+        <div class="p-catalog-item">
 
-      <div class="p-catalog-item">
+          <div class="full-description">
 
-        <div class="full-description">
-
+            
           <div class="c-catalog-item">
             <div class="img">
-              <a href="" style="background-image: url(../tmp/catalog-item-img-1.png);"></a>
+              <a href="" style="background-image: url();">
+                <img src="../tmp/catalog-item-img-5.png" alt="">
+                <span class="title">Суши и пицца от Ginger со скидкой до 90%</span>
+              </a>
             </div>
             <div class="description">
-              <div class="title"><a href="">Горящий</a></div>
+              
               <div class="remaining">
-                <i class="icon icon-remaining"></i>ост. 14 дней
+                <i class="icon"></i>ост. 14 дней
               </div>
               <div class="tags">
                 <div class="provider">
-                  <a href=""><i class="icon icon-star-empty"></i>TravelSystems</a>
+                  <a href=""><i class="star-icon"></i>TravelSystems</a>
                 </div>
                 <div class="category">
-                  <a href=""><i class="icon icon-star-full"></i>туризм</a>
+                  <a href=""><i class="star-icon"></i>туризм</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="full-description-in">
-            Travel Systems — турфирма, которая является номер 1 в Казахстане и планирует в скором времени стать номер 1 в мире! 
+            <div class="full-description-in">
+              Travel Systems — турфирма, которая является номер 1 в Казахстане и планирует в скором времени стать номер 1 в мире! 
+            </div>
+
           </div>
 
-        </div>
+          <div class="addresses">
 
-        <div class="addresses">
+            <div class="map" id="map"></div>        
 
-          <div class="map">
-            <img src="../tmp/catalog-item-map.png" alt="">
-          </div>        
+            <ul>
 
-          <ul>
+              <li>
+                
+                <p><b>Адрес:</b><br>
+                ул. Казыбек би, д. 22, оф.116<br>
+                (м/у пр.Достык и Калдаякова) </p>
+                
+                <p><b>Телефоны:</b><br>
+                +7 (727) 352-71-54 <br>
+                +7 (727) 352-71-57</p>
+                
+                <p><b>График работы:</b><br>
+                Будни: c 10:00 до 19:00<br>
+                Суббота c 10:00 до 14:00.</p>
 
-            <li>
-              
-              <p><b>Адрес:</b><br>
-              ул. Казыбек би, д. 22, оф.116<br>
-              (м/у пр.Достык и Калдаякова) </p>
-              
-              <p><b>Телефоны:</b><br>
-              +7 (727) 352-71-54 <br>
-              +7 (727) 352-71-57</p>
-              
-              <p><b>График работы:</b><br>
-              Будни: c 10:00 до 19:00<br>
-              Суббота c 10:00 до 14:00.</p>
+              </li>
+              <li>
+                
+                <p><b>Адрес:</b><br>
+                ул. Казыбек би, д. 22, оф.116<br>
+                (м/у пр.Достык и Калдаякова) </p>
+                
+                <p><b>Телефоны:</b><br>
+                +7 (727) 352-71-54 <br>
+                +7 (727) 352-71-57</p>
+                
+                <p><b>График работы:</b><br>
+                Будни: c 10:00 до 19:00<br>
+                Суббота c 10:00 до 14:00.</p>
 
-            </li>
-            <li>
-              
-              <p><b>Адрес:</b><br>
-              ул. Казыбек би, д. 22, оф.116<br>
-              (м/у пр.Достык и Калдаякова) </p>
-              
-              <p><b>Телефоны:</b><br>
-              +7 (727) 352-71-54 <br>
-              +7 (727) 352-71-57</p>
-              
-              <p><b>График работы:</b><br>
-              Будни: c 10:00 до 19:00<br>
-              Суббота c 10:00 до 14:00.</p>
+              </li>
 
-            </li>
+            </ul>
 
-          </ul>
+          </div>
 
-        </div>
+          <div class="br"></div>
 
-        <div class="br"></div>
+          <div class="socials">
+            <div class="social-box"><img src="../tmp/catalog-item-socials-fb.png" alt=""></div>
+            <div class="social-box"><img src="../tmp/catalog-item-socials-twt.png" alt=""></div>
+            <div class="social-box"><img src="../tmp/catalog-item-socials-vk.png" alt=""></div>
+          </div>
 
-        <div class="socials">
-          <div class="social-box"><img src="../tmp/catalog-item-socials-fb.png" alt=""></div>
-          <div class="social-box"><img src="../tmp/catalog-item-socials-twt.png" alt=""></div>
-          <div class="social-box"><img src="../tmp/catalog-item-socials-vk.png" alt=""></div>
-        </div>
+          <div class="similar">
 
-        <div class="similar">
+            <div class="block-title">Похожие акции</div>
 
-          <div class="block-title">Похожие акции</div>
-
-          <div class="b-catalog" data-columns>
+            <div class="b-catalog" data-columns>
           
-            <div class="c-catalog-item">
-              <div class="img">
-                <a href="" style="background-image: url(../tmp/catalog-item-img-1.png);"></a>
+          <div class="c-catalog-item">
+            <div class="img">
+              <a href="" style="background-image: url();">
+                <img src="../tmp/catalog-item-img-1.png" alt="">
+                <span class="title">Горящий тур по Америке на двоих от TravelSystems</span>
+              </a>
+            </div>
+            <div class="description">
+              
+              <div class="remaining">
+                <i class="icon"></i>ост. 14 дней
               </div>
-              <div class="description">
-                <div class="title"><a href="">Горящий</a></div>
-                <div class="remaining">
-                  <i class="icon icon-remaining"></i>ост. 14 дней
+              <div class="tags">
+                <div class="provider">
+                  <a href=""><i class="star-icon"></i>TravelSystems</a>
                 </div>
-                <div class="tags">
-                  <div class="provider">
-                    <a href=""><i class="icon icon-star-empty"></i>TravelSystems</a>
-                  </div>
-                  <div class="category">
-                    <a href=""><i class="icon icon-star-full"></i>туризм</a>
-                  </div>
+                <div class="category">
+                  <a href=""><i class="star-icon"></i>туризм</a>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="c-catalog-item">
-              <div class="img">
-                <a href="" style="background-image: url(../tmp/catalog-item-img-1.png);"></a>
+          <div class="c-catalog-item">
+            <div class="img">
+              <a href="" style="background-image: url();">
+                <img src="../tmp/catalog-item-img-2.png" alt="">
+                <span class="title">Центр здоровья и красоты AquaBike Center (до 50%)</span>
+              </a>
+            </div>
+            <div class="description">
+              
+              <div class="remaining">
+                <i class="icon"></i>ост. 14 дней
               </div>
-              <div class="description">
-                <div class="title"><a href="">Горящий</a></div>
-                <div class="remaining">
-                  <i class="icon icon-remaining"></i>ост. 14 дней
+              <div class="tags">
+                <div class="provider">
+                  <a href=""><i class="star-icon"></i>TravelSystems</a>
                 </div>
-                <div class="tags">
-                  <div class="provider">
-                    <a href=""><i class="icon icon-star-empty"></i>TravelSystems</a>
-                  </div>
-                  <div class="category">
-                    <a href=""><i class="icon icon-star-full"></i>туризм</a>
-                  </div>
+                <div class="category">
+                  <a href=""><i class="star-icon"></i>туризм</a>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="c-catalog-item">
-              <div class="img">
-                <a href="" style="background-image: url(../tmp/catalog-item-img-1.png);"></a>
+          <div class="c-catalog-item">
+            <div class="img">
+              <a href="" style="background-image: url();">
+                <img src="../tmp/catalog-item-img-3.png" alt="">
+                <span class="title">Скидки на очки и линзы Lensmark (до 70%)</span>
+              </a>
+            </div>
+            <div class="description">
+              
+              <div class="remaining">
+                <i class="icon"></i>ост. 14 дней
               </div>
-              <div class="description">
-                <div class="title"><a href="">Горящий</a></div>
-                <div class="remaining">
-                  <i class="icon icon-remaining"></i>ост. 14 дней
+              <div class="tags">
+                <div class="provider">
+                  <a href=""><i class="star-icon"></i>TravelSystems</a>
                 </div>
-                <div class="tags">
-                  <div class="provider">
-                    <a href=""><i class="icon icon-star-empty"></i>TravelSystems</a>
-                  </div>
-                  <div class="category">
-                    <a href=""><i class="icon icon-star-full"></i>туризм</a>
-                  </div>
+                <div class="category">
+                  <a href=""><i class="star-icon"></i>туризм</a>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="c-catalog-item">
+            <div class="img">
+              <a href="" style="background-image: url();">
+                <img src="../tmp/catalog-item-img-4.png" alt="">
+                <span class="title">Билеты в Bekmambetov Cinema от 750 тенге</span>
+              </a>
+            </div>
+            <div class="description">
+              
+              <div class="remaining">
+                <i class="icon"></i>ост. 14 дней
+              </div>
+              <div class="tags">
+                <div class="provider">
+                  <a href=""><i class="star-icon"></i>TravelSystems</a>
+                </div>
+                <div class="category">
+                  <a href=""><i class="star-icon"></i>туризм</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="c-catalog-item">
+            <div class="img">
+              <a href="" style="background-image: url();">
+                <img src="../tmp/catalog-item-img-5.png" alt="">
+                <span class="title">Суши и пицца от Ginger со скидкой до 90%</span>
+              </a>
+            </div>
+            <div class="description">
+              
+              <div class="remaining">
+                <i class="icon"></i>ост. 14 дней
+              </div>
+              <div class="tags">
+                <div class="provider">
+                  <a href=""><i class="star-icon"></i>TravelSystems</a>
+                </div>
+                <div class="category">
+                  <a href=""><i class="star-icon"></i>туризм</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="c-catalog-item">
+            <div class="img">
+              <a href="" style="background-image: url();">
+                <img src="../tmp/catalog-item-img-6.png" alt="">
+                <span class="title">Распродажа осенней коллекции Showroom (до 80%)</span>
+              </a>
+            </div>
+            <div class="description">
+              
+              <div class="remaining">
+                <i class="icon"></i>ост. 14 дней
+              </div>
+              <div class="tags">
+                <div class="provider">
+                  <a href=""><i class="star-icon"></i>TravelSystems</a>
+                </div>
+                <div class="category">
+                  <a href=""><i class="star-icon"></i>туризм</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
 
           </div>
 
@@ -412,6 +600,8 @@
       </div>
 
     </div>
+
+    <div class="footer-placeholder"></div>
 
   </div>
 
@@ -450,7 +640,7 @@
 
   <div class="popup-overlay" data-action="hide-auth"></div>
 
-  <div class="auth-popup">
+  <div class="l-auth-popup">
     
     <div class="popup-in">
 
@@ -541,9 +731,41 @@
 <script src="../../bower_components/sly/dist/sly.js"></script>
 
 <script src="../../bower_components/salvattore/dist/salvattore.js"></script>
+
+<script src="../../bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <!-- endbuild -->
 
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
 <script src="../static/js/main.js"></script>
+
+  <script>
+
+    $(function(){
+      var center = {lat: 43.238847886219986, lng: 76.85008184814453};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: center,
+        disableDefaultUI: true
+      });
+
+      var markers = [{lat: 43.22294099990729, lng:76.8412971496582}, {lat: 43.237387032521454, lng:76.87751770019531}]
+      var image = '../static/i/contacts-map-marker.png';
+
+      markers.forEach(function(coords){
+        new google.maps.Marker({
+          position: coords,
+          map: map,
+          title: 'Hello World!',
+          icon: image
+        });
+      })
+
+
+    })
+
+  </script>
 
 </body>
 </html>

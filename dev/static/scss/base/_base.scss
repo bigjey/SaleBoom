@@ -5,9 +5,11 @@
 
 html {
   min-width: 320px;
+  height: 100%;
 }
 
 body {
+  height: 100%;
   font: normal 14px 'museo_sans_cyr', Arial;
   color: #000;
   min-width: 320px;
@@ -17,10 +19,14 @@ a {
   text-decoration: none;
   color: #000;
 
-  transition: color .2s, background-color .2s, border .2s;
+  transition: color .1s, background-color .1s, border .1s;
   &:hover {
     color: $color-firm-red;
   }
+}
+
+.layout {
+  min-height: 100%;
 }
 
 .wrap {
@@ -131,6 +137,44 @@ a {
     margin-top: 10px;
     font-size: 24px;
     color: #b4b4b4;
+    position: relative;
+    .arr {      
+      position: absolute;
+      width: 50%;
+      left: 4px;
+      top: 50%;
+      margin-top: -2px;
+      height: 4px;
+      background: $bg-btn;
+      @include adaptive-to ($desktop-w){
+        display: none;
+      }
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 3px;
+        background: $bg-btn;
+        left: -4px;        
+        top: 0;
+      }
+      &:before {
+        top: -2px;
+        transform: rotate(-30deg);
+      }
+      &:after {
+        top: auto;        
+        bottom: -2px;
+        transform: rotate(30deg);
+      }
+    }
+    span {
+      display: inline-block;
+      background: #fff;
+      position: relative;
+      padding: 0 12px;
+      z-index: 2;
+    }
   }
 }
 
@@ -185,175 +229,6 @@ body.show-nav {
     top: 0;
     left: 0;
     opacity: 1;
-  }
-
-}
-
-.auth-popup {
-  width: 470px;
-  background: #fff;
-  position: absolute;
-  z-index: 500;
-  left: 50%;
-  top: 150px;
-  margin-left: -(470px/2);
-  left: -9999px;
-
-  transform: translateY(-50px);
-  opacity: 0;
-  transition: transform .2s ease, opacity .2s ease;
-
-  @include adaptive-to($desktop-w){
-    width: 280px;
-    position: fixed;
-    top: 80px;
-    right: 0;
-    bottom: 0;    
-    left: auto !important;
-    margin: 0 !important;
-    z-index: 600;
-    transform: translateY(0px);
-    transform: translateX(100%);
-  }
-
-  @include adaptive-to($tablet-w) {
-    top: 60px;
-  }
-
-  .popup-in {
-    height: 100%;
-    overflow: auto;
-    padding: 50px 60px;
-
-    @include adaptive-to($desktop-w){
-      padding: 20px;
-    }
-  }
-
-  body.show-auth & {
-    margin-top: 0;
-    transform: translateY(0px);
-    opacity: 1;
-    left: 50%;
-  }
-
-  .close-icon {
-    position: absolute;
-    top: 0;
-    right: -50px;
-    &:after, &:before {
-      background-color: #fff;
-    }
-
-    @include adaptive-to($desktop-w){
-      top: -35px;
-      right: 25px;
-      background: #fff;
-      &:after, &:before {
-        background-color: #000;
-      }
-    }
-
-    @include adaptive-to($tablet-w){
-      top: -40px;
-      right: 8px;
-    }
-
-  }
-
-  .switcher {
-    color: #c8c8c8;
-    font-size: 0;
-    padding-bottom: 30px;
-    @include adaptive-to($desktop-w){
-      display: none;
-    }
-
-    a {
-      display: inline-block;
-      font-weight: bold;      
-      font-size: 28px;
-      color: #c8c8c8;
-      &:hover {
-        color: #000;
-      }
-      &.active {
-        color: #000;
-      }
-      + a {
-        padding-left: 16px;
-        margin-left: 15px;
-        border-left: 1px solid #c8c8c8;
-      }
-    }
-  }
-  .auth-tab {
-    display: none;
-    &.active {
-      display: block;
-    }
-  }
-  .login {
-    .forgot-password {
-      float: right;
-      color: $color-firm-red;
-    }
-  }
-  .social-login {
-    padding-top: 30px;
-    .label {
-      font-size: 16px;
-    }
-    ul {
-      margin-left: -10px;
-      margin-top: -10px;
-      list-style: none;
-      padding: 0;
-      @extend .clearfix;
-      padding-top: 7px;
-      li {
-        width: 50%;
-        padding-left: 10px;
-        float: left;
-        margin-top: 10px;
-        a {
-          display: block;
-          color: #fff;
-          border-radius: 3px;
-          height: 40px;
-          line-height: 40px;
-          &.fb {
-            background-color: #3b5998;
-            &:hover {
-              background-color: darken(#3b5998, 5%);
-            }
-          }
-          &.twt {
-            background-color: #4099ff;
-            &:hover {
-              background-color: darken(#4099ff, 5%);
-            }
-          }
-          &.vk {
-            background-color: #45668e;
-            &:hover {
-              background-color: darken(#45668e, 5%);
-            }
-          }
-          &.gp {
-            background-color: #d34836;
-            &:hover {
-              background-color: darken(#d34836, 5%);
-            }
-          }
-          .icon-box {
-            display: inline-block;
-            width: 40px;
-            text-align: center;
-          }
-        }
-      }
-    }
   }
 
 }

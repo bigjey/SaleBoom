@@ -14,9 +14,16 @@
       color: $color-firm-red;      
     }
 
+    p {
+      margin: 0 0 20px;
+    }
+
     li {
       position: relative;
       padding-left: 30px;
+      + li {
+        margin-top: 30px;
+      }
       .icon {
         position: absolute;
         left: 0;
@@ -27,6 +34,7 @@
         margin-right: 20px;
         @include adaptive-to($tablet-w){
           display: block;
+          margin-bottom: 10px;
         }
       }
       .socials {
@@ -47,6 +55,7 @@
     }
   }
   .map {
+    height: 380px;
     img {
       max-width: 100%;
     }

@@ -43,10 +43,6 @@
     }
   }
 
-  .sidebar-in {
-    overflow: auto;
-  }
-
   .hamburger-icon {
     position: absolute;
     right: 30px;
@@ -324,6 +320,13 @@
           font-weight: bold;
         }
       }
+    }
+  }
+
+  .tab {
+    display: none;
+    &.active {
+      display: block;
     }
   }
 

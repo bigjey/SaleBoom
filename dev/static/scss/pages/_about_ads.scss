@@ -5,4 +5,13 @@
   @include adaptive-to($tablet-w){
     padding: 0;
   }
+
+  .ads-scheme {
+    margin-bottom: 1em;
+    overflow: auto;
+    max-width: 100%;
+    img {
+      max-width: none;
+    }
+  }
 }

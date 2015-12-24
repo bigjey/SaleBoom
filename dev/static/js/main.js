@@ -7,6 +7,32 @@
   });
 */
 
+  $(document).on('click', '[data-dismiss="tip-box"]', function(e){
+    e.preventDefault();
+    $(this).closest('[data-tip-box]').fadeOut();
+  })
+
+  $(document).on('click', '.tabs-nav a', function(e){
+    e.preventDefault();
+
+    var $link = $(this);
+    
+    if ($link.hasClass('active')) return;
+
+    var $nav = $link.closest('.tabs-nav');
+
+    var $tabs = $link.closest('.tabs');
+    var $tab = $tabs.find('.tab').eq($link.index());
+
+    $nav.find('a').removeClass('active');
+    $link.addClass('active');
+
+    $tabs.find('.tab').removeClass('active');
+    $tab.addClass('active');
+
+
+  })
+
   $(document).on('click', '.l-header .city .trigger', function(e){
     e.preventDefault();
     $(this).closest('.city').addClass('show');
@@ -74,7 +100,7 @@
 
   $(document).on('click', function(e){
 
-    if (!$(e.target).is('.auth-popup') && !$(e.target).is('[data-auth-tab]') && $(e.target).closest('.auth-popup').length == 0){
+    if (!$(e.target).is('.l-auth-popup') && !$(e.target).is('[data-auth-tab]') && $(e.target).closest('.l-auth-popup').length == 0){
       $('body').removeClass('show-auth');    
 
       if (!$(e.target).is('.l-sidebar') && !$(e.target).is('[data-action="show-nav"]') && $(e.target).closest('.l-sidebar').length == 0 && $(e.target).closest('[data-action="show-nav"]').length == 0){
@@ -95,21 +121,25 @@
   var $slidee = $frame.children('.slidee').eq(0);
   var $wrap   = $frame.parent();
 
-  $frame.sly({
-    horizontal: 1,
-    itemNav: 'basic',
-    activateOn: 'click',
-    touchDragging: 1,
-    releaseSwing: 1,    
-    speed: 650,
-    elasticBounds: 1,
-    cycleBy: 'pages',
-    cycleInterval: 5000,
-    pauseOnHover: true,
-    
-    prevPage: $wrap.find('.prev'),
-    nextPage: $wrap.find('.next')
+  $frame.imagesLoaded( function() {
+    $frame.sly({
+      horizontal: 1,
+      itemNav: 'basic',
+      activateOn: 'click',
+      touchDragging: 1,
+      releaseSwing: 1,    
+      speed: 650,
+      elasticBounds: 1,
+      cycleBy: 'pages',
+      cycleInterval: 5000,
+      pauseOnHover: true,
+      
+      prevPage: $wrap.find('.prev'),
+      nextPage: $wrap.find('.next')
+    });
   });
+
+  
 
   // - promo-carousel
 

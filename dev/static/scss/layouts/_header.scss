@@ -47,6 +47,11 @@
     @include adaptive-to($tablet-w){
       padding: 0;
       padding-bottom: 58px;
+      
+      body.hide-mobile-search & {
+        padding-bottom: 0;
+      }
+
     }
   }
 
@@ -118,6 +123,9 @@
 
       @include adaptive-to($tablet-w){
         margin-left: 55px;
+        body.hide-mobile-slogan & {
+          display: none;
+        }
       }
 
       .big {
@@ -171,6 +179,11 @@
       padding: 10px;
       width: auto;
       background: #fff;
+
+
+      body.hide-mobile-search & {
+        display: none;
+      }
 
       .example {
         display: none;
@@ -236,6 +249,11 @@
           margin: 0;
           padding: 20px;
           font-size: 16px;
+
+          @include adaptive-to($tablet-w){
+            border-top: 0;
+          }
+
           li {
             a {
               display: block;
@@ -382,6 +400,12 @@
           @include adaptive-from($desktop-wide-w){
             display: none;
           }
+          @include svg-icon('login');
+        }
+        &:hover {
+          .icon {
+            @include svg-icon('login-hover');
+          } 
         }
       }
 
@@ -415,10 +439,7 @@
         display: inline-block;
         vertical-align: middle;
       }
-      .user {
-        @include adaptive-between($desktop-w, $desktop-wide-w){
-          display: none;
-        }      
+      .user {    
       }
       .img {
         width: 55px;
@@ -428,6 +449,9 @@
       }
       .name {        
         font-weight: bold;
+        @include adaptive-between($desktop-w, $desktop-wide-w){
+          display: none;
+        }  
       }
       .logout {
         margin-left: 15px;

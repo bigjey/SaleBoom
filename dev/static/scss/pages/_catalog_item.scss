@@ -39,6 +39,7 @@
     .map {
       float: left;
       width: 330px;
+      height: 270px;
 
       @include adaptive-to($desktop-wide-w){
         float: none;
