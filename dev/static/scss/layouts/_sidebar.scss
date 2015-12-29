@@ -2,13 +2,13 @@
   float: left;
   width: 200px;
   position: relative;
-  
+
   @include adaptive-to($desktop-w){
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
-    width: 280px;
+    width: 320px;
     float: none;
     background: #fff;
     z-index: 200;
@@ -31,6 +31,7 @@
   }
 
   @include adaptive-to($tablet-w) {
+    width: 280px;
     .sidebar-top {
       height: auto;
       padding: 10px 15px;
@@ -130,13 +131,19 @@
       li {
         &.favorite {
           > a .star-icon {
-            @include svg-icon('star-full');
+            @include svg-sprite('star-full');
+            @include adaptive-to($desktop-w){
+              @include svg-sprite('star-full-big');
+            }
           }
         }
         a {
           display: block;
           position: relative;
           padding-left: 20px;
+          @include adaptive-to($desktop-w){
+            padding-left: 36px;
+          }
           &:hover {
             color: $color-firm-red;
           }
@@ -147,6 +154,12 @@
             position: absolute;
             left: 0;
             top: -3px;
+
+
+            @include adaptive-to($desktop-w){
+              @include svg-sprite('star-big');
+              top: -8px;
+            }
           }
         }
       }
@@ -154,6 +167,7 @@
     .lvl-1 {
       > ul {
         > li {
+          border-bottom: 1px dashed transparent;
           &.open {
             .lvl-2 {
               display: block;
@@ -195,7 +209,7 @@
             }
             > a {
               .expand-icon {
-                @include svg-icon('nav-collapse');
+                @include svg-sprite('nav-collapse');
               }
             }
           }
@@ -214,7 +228,7 @@
 
             .expand-icon {
               margin-top: -2px;
-              @include svg-icon('nav-expand');
+              @include svg-sprite('nav-expand');
             }
           }
         }
@@ -224,13 +238,23 @@
       display: none;
       > ul {
         padding: 15px 0 15px;
+
+        @include adaptive-to($desktop-w){
+          padding: 20px 0 20px;
+        }
         > li {
           &:not(.favorite):hover {
             > a {
               .star-icon {
-                @include svg-icon('star');
+                @include svg-sprite('star');
+                @include adaptive-to($desktop-w){
+                  @include svg-sprite('star-big');
+                }
                 &:hover {
-                  @include svg-icon('star-full');
+                  @include svg-sprite('star-full');
+                  @include adaptive-to($desktop-w){
+                    @include svg-sprite('star-full-big');
+                  }
                 }
               }
             }
@@ -238,7 +262,10 @@
           }
 
           + li {
-            margin-top: 10px;
+            margin-top: 10px;            
+            @include adaptive-to($desktop-w){
+              margin-top: 15px;
+            }
           }
           > a {
 
@@ -275,14 +302,14 @@
   }
 
   .auth {
-    padding-bottom: 28px;
+    padding-bottom: 38px;
 
     @include adaptive-from($desktop-w){
       display: none;
     }
 
     @include adaptive-to($tablet-w) {
-      padding-bottom: 15px;
+      padding-bottom: 18px;
     }
 
     .loginned {
@@ -310,7 +337,7 @@
     }
     .actions {
       font-size: 16px;
-      padding-top: 15px;
+      padding-top: 12px;
       a {
         + a {
           margin-left: 15px;

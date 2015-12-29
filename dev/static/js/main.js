@@ -7,6 +7,20 @@
   });
 */
 
+  $(document).on('click', '.c-promo-catalog .promo-box:not(.show)', function(e){
+    e.preventDefault();
+
+    var $box = $(this),
+        index = $box.index(),
+        $activeBox = $box.parent().find('.promo-box.show'),
+        boxPos = $box.data('pos'),
+        activeBoxPos = $activeBox.data('pos');
+
+    $activeBox.removeClass('show pos-1 pos-2 pos-3').addClass('pos-'+boxPos).data('pos', boxPos);
+    $box.removeClass('pos-1 pos-2 pos-3').addClass('show pos-'+activeBoxPos).data('pos', activeBoxPos);
+
+  })
+
   $(document).on('click', '[data-dismiss="tip-box"]', function(e){
     e.preventDefault();
     $(this).closest('[data-tip-box]').fadeOut();

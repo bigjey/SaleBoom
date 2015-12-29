@@ -146,7 +146,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            @include svg-icon('star-full');
+            @include svg-sprite('star-full');
             cursor: pointer;
           }
         }

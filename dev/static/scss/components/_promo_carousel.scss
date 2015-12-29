@@ -52,6 +52,9 @@
     &.disabled {
       opacity: 0;
     }
+    @include adaptive-to($tablet-w){
+      display: none;
+    }
   }
 
   .prev {

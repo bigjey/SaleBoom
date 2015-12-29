@@ -150,11 +150,13 @@ gulp.task('svg-sprite', function () {
       mode: {
         css: {
           dest: '../',
-          sprite: "../i/sprite.css.svg",
+          sprite: "../i/sprite.svg",
           prefix: '.svg-icon-%s',
+          bust: false,
           render: {
             scss: {
-              dest: "../scss/utils/_svg_sprite.scss"
+              dest: "../scss/utils/_svg_sprite.scss",
+              template: "./dev/static/i/svg-sprite-template.scss"
             }
           }
         }
@@ -193,7 +195,7 @@ gulp.task('html', function () {
 gulp.task('css', function(){
   
   return gulp.src( path.dev.scss )
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({outpuyStyle: 'expanded'}).on('error', sass.logError))
     .pipe(gulp.dest( path.dev.cssFolder ))
     .pipe(browserSync.stream());
 

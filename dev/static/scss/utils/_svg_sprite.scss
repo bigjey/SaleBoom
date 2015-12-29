@@ -1,74 +1,12 @@
-%svg-common {
-	background: url("../i/sprite.css-76694a21.svg") no-repeat;
-}
-
-.svg-icon-login {
-	@extend %svg-common;
-	background-position: 0 0;
-}
-
-.svg-icon-login-dims {
-	width: 21px;
-	height: 19px;
-}
-
-.svg-icon-login-hover {
-	@extend %svg-common;
-	background-position: 53.84615384615385% 0;
-}
-
-.svg-icon-login-hover-dims {
-	width: 21px;
-	height: 19px;
-}
-
-.svg-icon-nav-collapse {
-	@extend %svg-common;
-	background-position: 95.45454545454545% 47.5%;
-}
-
-.svg-icon-nav-collapse-dims {
-	width: 16px;
-	height: 17px;
-}
-
-.svg-icon-nav-expand {
-	@extend %svg-common;
-	background-position: 0 100%;
-}
-
-.svg-icon-nav-expand-dims {
-	width: 16px;
-	height: 17px;
-}
-
-.svg-icon-remaining {
-	@extend %svg-common;
-	background-position: 0 52.77777777777778%;
-}
-
-.svg-icon-remaining-dims {
-	width: 20px;
-	height: 21px;
-}
-
-.svg-icon-star {
-	@extend %svg-common;
-	background-position: 47.61904761904762% 51.351351351351354%;
-}
-
-.svg-icon-star-dims {
-	width: 18px;
-	height: 20px;
-}
-
-.svg-icon-star-full {
-	@extend %svg-common;
-	background-position: 100% 0;
-}
-
-.svg-icon-star-full-dims {
-	width: 18px;
-	height: 19px;
-}
-
+$icons: (
+      sprite: (width: 76px, height: 68px, pngPath: '../i/sprite.png', svgPath: '../i/sprite.svg'),
+    login: (width: 17px, height: 15px, backgroundX: 0px, backgroundY: -30px),
+    login-hover: (width: 17px, height: 15px, backgroundX: -21px, backgroundY: -30px),
+    nav-collapse: (width: 12px, height: 13px, backgroundX: -18px, backgroundY: -49px),
+    nav-expand: (width: 12px, height: 13px, backgroundX: -34px, backgroundY: -49px),
+    remaining: (width: 16px, height: 17px, backgroundX: -56px, backgroundY: 0px),
+    star: (width: 14px, height: 16px, backgroundX: -56px, backgroundY: -21px),
+    star-big: (width: 24px, height: 26px, backgroundX: 0px, backgroundY: 0px),
+    star-full: (width: 14px, height: 15px, backgroundX: 0px, backgroundY: -49px),
+    star-full-big: (width: 24px, height: 24px, backgroundX: -28px, backgroundY: 0px),
+);

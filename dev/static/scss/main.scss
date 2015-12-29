@@ -1,12 +1,13 @@
-@import 'utils/vars';
-@import 'utils/mixins';
-@import 'utils/helpers';
-@import 'utils/fonts';
-
 @import 'utils/sprite';
 @include sprites($spritesheet-sprites);
 
 @import 'utils/svg_sprite';
+$sprite: map-get($icons, sprite) !default;
+
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/helpers';
+@import 'utils/fonts';
 
 @import 'base/base';
 

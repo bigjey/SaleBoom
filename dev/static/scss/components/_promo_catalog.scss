@@ -1,47 +1,87 @@
 .c-promo-catalog {
   margin-bottom: 20px;
-  padding-left: 52px;
+  margin-left: 52px;
+  margin-right: 5px;
+  padding-bottom: 52px;
+  position: relative;
   @extend .clearfix;
 
   @include adaptive-to($tablet-w){
     display: none;
   }
 
+  @include adaptive-between($tablet-w, $desktop-w){
+    padding-bottom: 80px;
+  }
+
   .promo-box {
     @extend .clearfix;
     position: relative;
     box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.15);
-    margin-left: -100%;
-    width: 100%;
-    float: left;
     background: #f5f5f5;
     border-radius: 5px;
+    width: 100%;
+    transition: box-shadow .4s ease, transform .4s ease;
+    left: 0;
+    bottom: auto;
 
-    &:nth-child(1) {
-      margin-left: 0;
-      //transform: translate(-50px, 50px);
-      left: -52px;
-      margin-top: 52px;
-      z-index: 1;
 
-      .box-img, .box-content {
-        opacity: .3;
-      }
+    .box-img {
+      opacity: .7;
+    }
+    .box-content {
+      visibility: hidden;
     }
 
-    &:nth-child(2) {
-      //transform: translate(-25px, 25px);
-      left: -26px;
-      margin-top: 26px;      
-      z-index: 2;
-
-      .box-img, .box-content {
-        opacity: .3;
-      }
-    }
-
-    &:nth-child(3) {
+    &.pos-1 {
+      margin-left: 0;      
       z-index: 3;
+      transform: translate(0px, 0px);
+    }
+
+    &.pos-2 {
+      box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.11);
+      position: absolute;
+      left: 0px;
+      bottom: 52px;
+      z-index: 2;
+      transform: translate(-26px, 26px);
+      @include adaptive-between($tablet-w, $desktop-w){
+        bottom: 80px;
+        transform: translate(-26px, 40px);
+      }
+    }
+
+    &.pos-3 {
+      box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.07);
+      position: absolute;
+      left: 0px;
+      bottom: 80px;
+      z-index: 1;
+      transform: translate(-52px, 80px);
+      @include adaptive-between($tablet-w, $desktop-w){
+
+      }
+    }
+
+    &:hover {     
+      box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.25);
+      .box-img, .box-content {
+        opacity: .8;
+      } 
+      cursor: pointer;
+    }
+
+    &.show {
+      box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.15);
+      cursor: default;
+      .box-img {
+        opacity: 1;
+      }
+      .box-content {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     .box-label {
@@ -69,6 +109,7 @@
       border-radius: 5px 0 0 5px;
       color: #fff;
       padding: 50px;
+      transition: opacity .2s ease;
 
       @include adaptive-between($tablet-w, $desktop-wide-w){
         padding: 40px;
@@ -128,6 +169,7 @@
       padding: 20px;
       background: #f5f5f5;
       border-radius: 0 0 5px 5px;
+      transition: opacity .2s ease;
 
       @include adaptive-between($tablet-w, $desktop-wide-w){
         margin-left: 250px;

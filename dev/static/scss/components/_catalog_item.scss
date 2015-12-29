@@ -4,6 +4,10 @@
   vertical-align: top;
   font-size: 12px;
 
+  @include adaptive-to($desktop-w){
+    font-size: 14px;
+  }
+
   &.horizontal {
     @extend .clearfix;
 
@@ -89,20 +93,34 @@
       padding-top: 8px;
       color: #ababab;
       .icon {
-        @include svg-icon('remaining');        
+        @include svg-sprite('remaining');        
       }
     }
 
     .tags {
       margin-top: 18px;
+      line-height: 20px;
       a {
         .star-icon {
-          @include svg-icon('star');
-          height: 20px;
-          margin-top: -3px;
+          margin-top: 0px;
+          margin-right: 5px;
+
+          vertical-align: top !important;
+          
+          @include svg-sprite(star);
+
+          @include adaptive-to($desktop-w){
+            @include svg-sprite(star-big);
+            margin-top: -8px;
+          }
+
           &:hover {
-            @include svg-icon('star-full');
-            height: 20px;
+            @include svg-sprite(star-full);
+            
+            @include adaptive-to($desktop-w){
+              @include svg-sprite(star-full-big);
+            }
+
           }
         }
       }
@@ -123,6 +141,11 @@
         font-size: 10px;
         text-transform: uppercase;
         letter-spacing: 1px;
+
+        @include adaptive-to($desktop-w){
+          font-size: 12px;
+        }
+
         a {
           color: #747874;
           &:hover {

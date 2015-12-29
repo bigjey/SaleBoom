@@ -22,3 +22,48 @@
   @extend .svg-icon-#{$name};
   @extend .svg-icon-#{$name}-dims;
 }
+
+@function sprite-attr($icon, $attr) {
+    $newIcon: map-get($icons, $icon);
+    @if $newIcon == null {
+        @warn "Can't find an icon with the name #{$icon}";
+    }
+    @return map-get($newIcon, $attr);
+}
+
+@function icon-attr($icon) {
+    $attr: (
+        width: sprite-attr($icon, width),
+        height: sprite-attr($icon, height),
+        x: sprite-attr($icon, backgroundX),
+        y: sprite-attr($icon, backgroundY)
+    );
+
+    @return $attr;
+}
+
+@mixin svg-sprite($icon, $type: all) {
+  @if $type == all {
+      // Shares the backgrounds
+      display: inline-block;
+      vertical-align: middle;
+      background-image: url(map-get($sprite, svgPath));
+      background-size: map-get($sprite, width) map-get($sprite, height);
+  }
+
+  $iconMap: icon-attr($icon);
+
+  // Outputs dimensions in em
+  @if $type == all or $type == size {
+      width: map-get($iconMap, width) + 2;
+      height: map-get($iconMap, height) + 2;
+  }
+
+  // Outputs background position in em
+  @if $type == all or $type == bg {
+      background-position: map-get($iconMap, x) map-get($iconMap, y);
+  }
+
+
+}
+

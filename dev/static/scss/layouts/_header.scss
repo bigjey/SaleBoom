@@ -400,11 +400,11 @@
           @include adaptive-from($desktop-wide-w){
             display: none;
           }
-          @include svg-icon('login');
+          @include svg-sprite('login');
         }
         &:hover {
           .icon {
-            @include svg-icon('login-hover');
+            @include svg-sprite('login-hover');
           } 
         }
       }

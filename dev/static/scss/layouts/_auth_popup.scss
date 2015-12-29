@@ -13,7 +13,7 @@
   transition: transform .2s ease, opacity .2s ease;
 
   @include adaptive-to($desktop-w){
-    width: 280px;
+    width: 320px;
     position: fixed;
     top: 80px;
     right: 0;
@@ -26,6 +26,7 @@
   }
 
   @include adaptive-to($tablet-w) {
+    width: 280px;
     top: 55px;
   }
 
