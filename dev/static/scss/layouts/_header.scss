@@ -230,6 +230,9 @@
           margin: 4px;
           height: 30px;
         }
+        &:hover {
+          background-color: #F43756;
+        }
       }
 
       .results {
@@ -317,8 +320,8 @@
     .dropdown {
       position: absolute;
       top: 0;
-      padding: 11px 10px;
-      margin: 0 -10px;
+      padding: 15px 20px;
+      margin: -4px -20px;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -351,7 +354,7 @@
           }
 
           &.active {
-            font-weight: bold;
+            font-weight: 900;
           }
           &.disabled {
             a {
@@ -403,9 +406,11 @@
           @include svg-sprite('login');
         }
         &:hover {
-          .icon {
-            @include svg-sprite('login-hover');
-          } 
+          @include adaptive-between($desktop-w, $desktop-wide-w){
+            .icon {
+              @include svg-sprite('login-hover');
+            } 
+          }          
         }
       }
 
@@ -417,7 +422,7 @@
     }
 
     .divider {
-      margin: 0 5px;
+      margin: 0 10px;
       width: 1px;
       display: inline-block;
       height: 16px;

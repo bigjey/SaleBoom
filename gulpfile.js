@@ -38,7 +38,7 @@ var path = {
   dev: {
     html: './dev/html/*.html',
     scss: './dev/static/scss/**/*.scss',
-    scssIgnore: '!./dev/static/scss/utils/_sprite.scss',
+    scssIgnore: '!./dev/static/scss/utils/*sprite*.scss',
     js: './dev/static/js/**/*.js',
     
     cssFolder: './dev/static/css/',

@@ -59,6 +59,10 @@
     @extend .clearfix;
     margin-bottom: 15px;
 
+    body.m-show-tips & {
+      visibility: hidden;
+    }
+
     @include adaptive-to($desktop-w){
       margin: 0;      
     width: 240px;
@@ -109,6 +113,10 @@
 
   .nav {
 
+    body.m-show-tips & {
+      visibility: hidden;
+    }
+
     @include adaptive-to($desktop-w){
       padding: 20px;
       position: absolute;
@@ -149,6 +157,7 @@
           }
           .count {
             width: 0;
+            font-weight: normal;
           }
           .star-icon {
             position: absolute;

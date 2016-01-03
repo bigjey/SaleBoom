@@ -30,6 +30,12 @@
   .row-input {
 
   }
+  label {
+    cursor: pointer;
+    &:hover {
+      color: $color-firm-red;
+    }
+  }
   input[type=text],  
   input[type=password],  
   input[type=number],  
@@ -81,13 +87,21 @@
   display: inline-block;  
   height: 34px;
   line-height: 20px;
-  padding: 7px 15px;
+  padding: 8px 15px 7px;
   font: normal 14px 'museo_sans_cyr', Arial;
   border-radius: 3px;
   border: 1px solid #000;
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  &:hover {
+    background: #000;
+    color: #fff;
+    label {
+      color: #fff;
+      display: block;
+    }
+  }
   * {
     cursor: pointer;
   }

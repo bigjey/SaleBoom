@@ -23,7 +23,7 @@
 
   $(document).on('click', '[data-dismiss="tip-box"]', function(e){
     e.preventDefault();
-    $(this).closest('[data-tip-box]').fadeOut();
+    $(this).closest('[data-tip-box]').slideUp().fadeOut();
   })
 
   $(document).on('click', '.tabs-nav a', function(e){
@@ -105,7 +105,6 @@
   $('[data-action="show-auth"]').on('click', function(e){
     e.preventDefault();
     var tab = $(this).data('auth-tab') || 'login';
-    console.log(tab);
     $('[data-auth-tab]').removeClass('active').filter('[data-auth-tab="'+tab+'"]').addClass('active');
     if (!$('body').hasClass('show-auth')){
       $('body').addClass('show-auth show-nav');

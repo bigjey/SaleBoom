@@ -27,6 +27,7 @@ a {
 
 .layout {
   min-height: 100%;
+  position: relative;
 }
 
 .wrap {
@@ -70,6 +71,9 @@ a {
 
   .l-content-main {    
     margin-left: 215px;
+    padding: 0 5px;
+    margin-left: 210px;
+    margin-right: -5px;
     overflow: hidden;
 
     @include adaptive-to($desktop-w){
@@ -84,8 +88,7 @@ a {
   margin: 0 -10px;
   font-size: 0;
 
-  .c-catalog-item {
-    padding: 0 10px;
+  .c-catalog-item {    
     margin-bottom: 20px;
   }
 }
@@ -109,6 +112,7 @@ a {
 .b-catalog[data-columns] .column {
   float: left;
   width: 100%;
+  padding: 0 10px;
   &.size-1of1 {
     width: 100%;
   }

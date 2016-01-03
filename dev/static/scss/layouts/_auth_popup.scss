@@ -4,7 +4,7 @@
   position: absolute;
   z-index: 500;
   left: 50%;
-  top: 150px;
+  top: 50px;
   margin-left: -(470px/2);
   left: -9999px;
 
@@ -126,12 +126,19 @@
         padding-left: 10px;
         float: left;
         margin-top: 10px;
+        @include adaptive-to($desktop-w){
+          width: auto;
+        }
         a {
           display: block;
           color: #fff;
           border-radius: 3px;
           height: 40px;
           line-height: 40px;
+          @include adaptive-to($desktop-w){
+            font-size: 0;
+            padding: 0 5px;
+          }
           &.fb {
             background-color: #3b5998;
             &:hover {
@@ -164,6 +171,11 @@
         }
       }
     }
+  }
+
+  .form-btn.btn-block {
+    height: 50px;
+    line-height: 30px;
   }
 
 }

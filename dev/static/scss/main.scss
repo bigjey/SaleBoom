@@ -21,6 +21,7 @@ $sprite: map-get($icons, sprite) !default;
 @import 'layouts/footer';
 @import 'layouts/sidebar';
 @import 'layouts/auth_popup';
+@import 'layouts/tips';
 
 @import 'pages/about';
 @import 'pages/about_member';
