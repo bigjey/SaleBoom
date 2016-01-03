@@ -10,15 +10,13 @@
 
 <link rel="shortcut icon" href="../static/i/favicon.ico" type="image/x-icon">
 
-<!-- build:css ../static/css/vendors.css -->
-<link rel="stylesheet" href="../../bower_components/normalize-css/normalize.css" />
-<!-- endbuild -->
+<link rel="stylesheet" href="../static/css/vendors.css">
 
 <link rel="stylesheet" href="../static/css/main.css">
 
 </head>
 <body class="hide-mobile-search hide-mobile-slogan">
-  
+
   <div class="layout">
   
     <div class="l-header">
@@ -363,8 +361,8 @@
         </div>
 
       </div>
-
-      <div class="p-about-member">
+        
+      <div class="p-contacts">
 
         <div class="page-side-nav">
           <ul>
@@ -377,23 +375,32 @@
         </div>
 
         <div class="page-content-push-right">
-        
-          <div class="member-name">Ахмед Мехмед</div>
-          
-          <div class="member-position">ЛОКОМОТИВ ПРОЕКТА</div>
-          
-          <div class="member-quote">
-            <div class="quote-img">
-              <img src="../tmp/member-quote.jpg" alt="">
-            </div>
-            <div class="quote-text">«ЕСЛИ ГОРА НЕ ИДЕТ К МАГОМЕДУ, ТО МАГОМЕД ИДЕТ К ГОРЕ»</div>
-          </div>
 
-          <div class="article">
-            <p>Окончательно решил до конца жизни учить французский язык. К приоритетному серому цвету добавились ещё два – темно-серый и светло-серый. Шутить почти перестал, вместо этого громко смеется шуткам программного директора Влада Микеева в жанре «черный юмор».</p>
-            <p>В связи с изменением политической обстановки в стране перестал носить майку со сложночитаемым словом х… и вместо этого иногда носит белый значок.</p>
-            <p>К часам, машинам, рыбалке, футболу, хоккею, бане и пиву совершенно равнодушен. Мечтает чтобы не было необходимости заменить собой любого сотрудника радиостанции. Не любит: невнятных ответов на любые вопросы и когда щелкают ручкой. </p>
-          </div>
+          <div class="page-title">Контакты</div>
+
+          <ul class="contacts-list">
+            <li>
+              <div class="icon"><i class="icon icon-contacts-phone"></i></div>
+              <p><span class="phone-number">+ 7 727 243 84 93</span>   Узнать о скидках и акциях</p>
+              <p><span class="phone-number">+ 7 727 243 84 92</span>   Разместить скидку или акцию</p>
+              <p><span class="phone-number">+ 7 727 243 84 91</span>   Просто поболтать :)</p>
+            </li>
+            <li>
+              <div class="icon"><i class="icon icon-contacts-email"></i></div>
+              <b><a href="">hello@saleboom.kz</a></b>
+              <span class="socials">
+                <a href="" class="font-icon">ä</a>
+                <a href="" class="font-icon">å</a>
+                <a href="" class="font-icon">ë</a>
+              </span>
+            </li>
+            <li>
+              <div class="icon"><i class="icon icon-contacts-address"></i></div>
+              <p>г.Алматы, ул.Ауэзова 50, офис 304</p>
+            </li>
+          </ul>
+
+          <div class="map" id="map"></div>
 
         </div>
 
@@ -525,19 +532,34 @@
   </div>
   
   
-  <!-- build:js ../static/js/vendors.js -->
-<script src="../../bower_components/jquery/dist/jquery.js"></script>
-
-<script src="../../bower_components/sly/dist/sly.js"></script>
-
-<script src="../../bower_components/salvattore/dist/salvattore.js"></script>
-
-<script src="../../bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<!-- endbuild -->
+  <script src="../static/js/vendors.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 
 <script src="../static/js/main.js"></script>
+
+  <script>
+
+    $(function(){
+      var myLatLng = {lat: 43.223847886219986, lng: 76.85108184814453};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: myLatLng,
+        disableDefaultUI: true
+      });
+
+      var image = '../static/i/contacts-map-marker.png';
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!',
+        icon: image
+      });
+
+    })
+
+  </script>
 
 </body>
 </html>

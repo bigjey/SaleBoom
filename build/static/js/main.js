@@ -7,12 +7,6 @@
   });
 */
 
-  $(document).on('click', '[data-dismiss="tips-overlay"]', function(e){
-    e.preventDefault();
-    $('.l-tips').fadeOut(function(){$(this).remove();})
-    $('body').removeClass('m-show-tips')
-  })
-
   $(document).on('click', '.c-promo-catalog .promo-box:not(.show)', function(e){
     e.preventDefault();
 

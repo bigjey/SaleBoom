@@ -2,7 +2,17 @@
 <html lang="ru">
 <head>
 
-  @@include('./partial/_head.html')
+  <meta charset="UTF-8">
+
+<title>Saleboom</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="../static/i/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="../static/css/vendors.css">
+
+<link rel="stylesheet" href="../static/css/main.css">
 
 </head>
 <body class="m-show-tips">
@@ -392,8 +402,8 @@
             <div class="body-in">
               <div class="text">Привет! Здесь я расскажу вам<br>о скидках и акциях, которые действуют в вашем городе :)</div>
               <div class="buttons">
-                <a href="" class="btn btn-ok" data-dismiss="tips-overlay"><i class="icon"></i>OK, все понятно!</a>
-                <a href="" class="btn btn-cancel" data-dismiss="tips-overlay"><i class="icon"></i>Скрыть подсказки</a>
+                <a href="" class="btn btn-ok"><i class="icon"></i>OK, все понятно!</a>
+                <a href="" class="btn btn-cancel"><i class="icon"></i>Скрыть подсказки</a>
               </div>
             </div>
           </div>
@@ -1466,7 +1476,11 @@
   </div>
   
   
-  @@include('./partial/_js.html')
+  <script src="../static/js/vendors.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script src="../static/js/main.js"></script>
 
 </body>
 </html>
