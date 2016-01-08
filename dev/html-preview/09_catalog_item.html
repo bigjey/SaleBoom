@@ -373,8 +373,10 @@
             
           <div class="c-catalog-item">
             <div class="img">              
-              <img src="../tmp/catalog-item-img-5.png" alt="">
-              <span class="title">Суши и пицца от Ginger со скидкой до 90%</span>              
+              <a>
+                <span class="img-placeholder" style="background-image: url(../tmp/catalog-item-img-5.png);"><img src="../tmp/catalog-item-img-5.png" alt=""></span>
+                <span class="title">Суши и пицца от Ginger со скидкой до 90%</span>              
+              </a>
             </div>
             <div class="description">
               
@@ -400,9 +402,84 @@
 
           <div class="addresses">
 
+            <div class="addresses-slider">
+              <div class="label">Где купить? <div class="counter"><span>1</span>/4</div></div>
+              <div class="slider">
+                <ul>
+                  <li>
+                    
+                    <p><b>Адрес:</b><br>
+                    ул. Казыбек би, д. 22, оф.116<br>
+                    (м/у пр.Достык и Калдаякова) </p>
+                    
+                    <p><b>Телефоны:</b><br>
+                    +7 (727) 352-71-54 <br>
+                    +7 (727) 352-71-57</p>
+                    
+                    <p><b>График работы:</b><br>
+                    Будни: c 10:00 до 19:00<br>
+                    Суббота c 10:00 до 14:00.</p>
+
+                  </li>
+
+                  <li>
+                    
+                    <p><b>Адрес:</b><br>
+                    ул. Казыбек би, д. 22, оф.116<br>
+                    (м/у пр.Достык и Калдаякова) </p>
+                    
+                    <p><b>Телефоны:</b><br>
+                    +7 (727) 352-71-54 <br>
+                    +7 (727) 352-71-57</p>
+                    
+                    <p><b>График работы:</b><br>
+                    Будни: c 10:00 до 19:00<br>
+                    Суббота c 10:00 до 14:00.</p>
+
+                  </li>
+
+                  <li>
+                    
+                    <p><b>Адрес:</b><br>
+                    ул. Казыбек би, д. 22, оф.116<br>
+                    (м/у пр.Достык и Калдаякова) </p>
+                    
+                    <p><b>Телефоны:</b><br>
+                    +7 (727) 352-71-54 <br>
+                    +7 (727) 352-71-57</p>
+                    
+                    <p><b>График работы:</b><br>
+                    Будни: c 10:00 до 19:00<br>
+                    Суббота c 10:00 до 14:00.</p>
+
+                  </li>
+
+                  <li>
+                    
+                    <p><b>Адрес:</b><br>
+                    ул. Казыбек би, д. 22, оф.116<br>
+                    (м/у пр.Достык и Калдаякова) </p>
+                    
+                    <p><b>Телефоны:</b><br>
+                    +7 (727) 352-71-54 <br>
+                    +7 (727) 352-71-57</p>
+                    
+                    <p><b>График работы:</b><br>
+                    Будни: c 10:00 до 19:00<br>
+                    Суббота c 10:00 до 14:00.</p>
+
+                  </li>
+
+                </ul>
+              </div>
+
+              <a href="" class="prev"></a>
+              <a href="" class="next"></a>
+            </div>
+
             <div class="map" id="map"></div>        
 
-            <ul>
+            <ul class="basic">
 
               <li>
                 
@@ -419,6 +496,7 @@
                 Суббота c 10:00 до 14:00.</p>
 
               </li>
+
               <li>
                 
                 <p><b>Адрес:</b><br>
@@ -441,10 +519,10 @@
 
           <div class="br"></div>
 
-          <div class="socials">
-            <div class="social-box"><img src="../tmp/catalog-item-socials-fb.png" alt=""></div>
-            <div class="social-box"><img src="../tmp/catalog-item-socials-twt.png" alt=""></div>
-            <div class="social-box"><img src="../tmp/catalog-item-socials-vk.png" alt=""></div>
+          <div class="socials social-likes" data-url="http://twitter.com">
+            <div class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</div>
+            <div class="twitter" title="Поделиться ссылкой в Твиттере">Twitter</div>
+            <div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Вконтакте</div>
           </div>
 
           <div class="similar">
@@ -455,7 +533,7 @@
           
           <div class="c-catalog-item">
             <div class="img">
-              <a href="" style="background-image: url();">
+              <a href="" style="background-image: url(../tmp/catalog-item-img-1.png);">
                 <img src="../tmp/catalog-item-img-1.png" alt="">
                 <span class="title">Горящий тур по Америке на двоих от TravelSystems</span>
               </a>
@@ -733,6 +811,8 @@
 <script src="../../bower_components/salvattore/dist/salvattore.js"></script>
 
 <script src="../../bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+<script src="../static/js/social-likes.min.js"></script>
 <!-- endbuild -->
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -742,6 +822,7 @@
   <script>
 
     $(function(){
+
       var center = {lat: 43.238847886219986, lng: 76.85008184814453};
 
       var map = new google.maps.Map(document.getElementById('map'), {
@@ -762,6 +843,34 @@
         });
       })
 
+      var $frame  = $('.addresses-slider .slider');
+      var $slidee = $frame.children('ul').eq(0);
+      var $wrap   = $frame.parent();
+
+      $slidee.find('li').css({width: $frame.width()});
+      
+      $frame.sly({
+        horizontal: 1,
+        itemNav: 'forceCentered',
+        activateMiddle: 1,
+        touchDragging: 1,
+        releaseSwing: 1,    
+        speed: 300,
+        elasticBounds: 1,
+        
+        prevPage: $wrap.find('.prev'),
+        nextPage: $wrap.find('.next')
+      }, {
+        active: function(e, index){
+          $wrap.find('.counter span').html(index + 1)
+        }
+      }).parent().hide();
+
+      $(window).on('resize', function(){
+        $slidee.find('li').css({width: $frame.width()});
+        $frame.sly('reload');
+      })
+      
 
     })
 

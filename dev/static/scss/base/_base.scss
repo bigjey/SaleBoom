@@ -59,6 +59,10 @@ a {
   padding: 20px 20px 50px;
   @extend .clearfix;
 
+  @include adaptive-to($tablet-w){
+    padding: 10px 10px 30px;
+  }
+
   &.extra-padding {
     padding-top: 50px;
     @include adaptive-to($desktop-w){
@@ -78,6 +82,9 @@ a {
 
     @include adaptive-to($desktop-w){
       margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+      overflow: visible;
     }
 
   }

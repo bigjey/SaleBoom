@@ -3,6 +3,7 @@
   width: 100%;
   vertical-align: top;
   font-size: 12px;
+  border-radius: 5px;
 
   @include adaptive-to($desktop-w){
     font-size: 14px;
@@ -12,15 +13,16 @@
 
   &:hover {
     box-shadow: 0 2px 6px rgba(0,0,0,.2);
-    .img {
-      img {
-        transform: scale(1.02);
-      }
+    
+    .img-placeholder {
+      transform: scale(1.02);
     }
   }
 
   &.horizontal {
     @extend .clearfix;
+
+    box-shadow: none !important;
 
     width: auto;
     display: block;
@@ -71,14 +73,22 @@
     border-radius: 5px 5px 0 0;
     a {
       display: block;
-      &:hover {
+      color: #000;
+      &[href]:hover {
         color: $color-firm-red;
+      }
+      .img-placeholder {
+        display: block;
+        background-position: center top;
+        background-size: 100% auto;
+        transition: transform .3s ease;
       }
     }
     img {
       width: 100%;
       display: block;
       transition: transform .3s ease;
+      visibility: hidden;
     }
   }
 
@@ -112,28 +122,27 @@
     .tags {
       margin-top: 18px;
       line-height: 20px;
-      a {
-        .star-icon {
-          margin-top: 0px;
-          margin-right: 5px;
+      .star-icon {
+        margin-top: 0px;
+        margin-right: 5px;
+        cursor: pointer;
 
-          vertical-align: top !important;
+        vertical-align: top !important;
+        
+        @include svg-sprite(star);
+
+        @include adaptive-to($desktop-w){
+          @include svg-sprite(star-big);
+          margin-top: -8px;
+        }
+
+        &:hover {
+          @include svg-sprite(star-full);
           
-          @include svg-sprite(star);
-
           @include adaptive-to($desktop-w){
-            @include svg-sprite(star-big);
-            margin-top: -8px;
+            @include svg-sprite(star-full-big);
           }
 
-          &:hover {
-            @include svg-sprite(star-full);
-            
-            @include adaptive-to($desktop-w){
-              @include svg-sprite(star-full-big);
-            }
-
-          }
         }
       }
       .provider {

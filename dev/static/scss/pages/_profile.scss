@@ -30,6 +30,7 @@
     .hero {
       font-size: 16px;
       line-height: 24px;
+      padding-bottom: 40px;
       a {
         color: $color-firm-red;
       }
@@ -39,7 +40,6 @@
     }
 
     .favorites {
-      margin-top: 20px;
       @include adaptive-to($desktop-w){
         display: block;
       }

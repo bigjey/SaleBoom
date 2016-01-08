@@ -1,11 +1,10 @@
 (function(){
-/*
-  $(".sidebar-in").stick_in_parent({
-    parent: $('.l-content'),
-    offset_top: 20,
-    bottoming: true
-  });
-*/
+
+  $(document).on('click', '[data-dismiss="tips-overlay"]', function(e){
+    e.preventDefault();
+    $('.l-tips').fadeOut(function(){$(this).remove();})
+    $('body').removeClass('m-show-tips')
+  })
 
   $(document).on('click', '.c-promo-catalog .promo-box:not(.show)', function(e){
     e.preventDefault();
@@ -16,14 +15,23 @@
         boxPos = $box.data('pos'),
         activeBoxPos = $activeBox.data('pos');
 
-    $activeBox.removeClass('show pos-1 pos-2 pos-3').addClass('pos-'+boxPos).data('pos', boxPos);
+    $activeBox.removeClass('show pos-1 pos-2 pos-3').addClass('out pos-'+boxPos).data('pos', boxPos);
     $box.removeClass('pos-1 pos-2 pos-3').addClass('show pos-'+activeBoxPos).data('pos', activeBoxPos);
+
+    setTimeout(function(){
+      var zi = $activeBox.css('z-index');      
+      $activeBox.removeClass('out').css({zIndex: $box.css('z-index')});
+      $box.css({zIndex: zi});
+    }, 200)
 
   })
 
   $(document).on('click', '[data-dismiss="tip-box"]', function(e){
     e.preventDefault();
-    $(this).closest('[data-tip-box]').slideUp().fadeOut();
+    $(this).closest('[data-tip-box]').find('.decor').animate({opacity: 0}, 100, function(){
+      $(this).closest('[data-tip-box]').slideUp();
+    });
+    
   })
 
   $(document).on('click', '.tabs-nav a', function(e){

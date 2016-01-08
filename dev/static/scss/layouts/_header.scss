@@ -28,17 +28,51 @@
     }
   }
 
+  .shadow {
+    height: 15px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 15px;
+    z-index: 3;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -15px;
+      display: block;
+      height: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .gradient {
+    position: absolute;
+    z-index: 2;
+    top: 0;        
+    bottom: 0;
+    right: 0;    
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    background: url(../i/header_bg.png) no-repeat left center;
+
+    @include adaptive-to($tablet-w){
+      display: none;
+    }
+
+  }
+
   > .wrap {
     @extend .clearfix;
     
     position: relative;
-    z-index: 2;
+    z-index: 4;
     padding: 15px 30px;
-    background: url(../i/header_bg.png) no-repeat left center;
-
-    @include adaptive-to($tablet-w){
-      background-image: none;
-    }
 
     @include adaptive-to($desktop-wide-w){
       padding: 15px 20px;

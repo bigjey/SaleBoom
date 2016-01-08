@@ -21,6 +21,19 @@
         margin-top: 30px;
       }
     }
+    &.has-error {
+      .row-error {
+        display: block;
+      }
+      input[type=text],  
+      input[type=password],  
+      input[type=number],  
+      input[type=email],
+      textarea,
+      select {
+        border-color: $color-firm-red;
+      }
+    }
   }
   .row-label {
     font-size: 16px;
@@ -29,6 +42,12 @@
   }
   .row-input {
 
+  }
+  .row-error {
+    color: $color-firm-red;
+    margin: 3px 0 8px;
+    font-size: 14px;
+    display: none;
   }
   label {
     cursor: pointer;

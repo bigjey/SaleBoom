@@ -32,3 +32,6 @@ $sprite: map-get($icons, sprite) !default;
 @import 'pages/catalog_item';
 @import 'pages/profile';
 @import 'pages/profile_edit';
+
+@import 'libs/animate';
+@import 'libs/social-likes';

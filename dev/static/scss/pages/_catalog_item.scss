@@ -4,6 +4,11 @@
   .full-description {
     @extend .clearfix;
     padding-bottom: 50px;
+
+    @include adaptive-to($tablet-w){
+      padding-bottom: 30px;
+    }
+
     .c-catalog-item {
       width: 330px;
       float: left;
@@ -24,6 +29,8 @@
 
       @include adaptive-to($tablet-w){
         margin-left: 0;
+        padding: 0 10px;
+      
       }
 
     }
@@ -33,7 +40,7 @@
     @extend .clearfix;
     padding-bottom: 55px;
     @include adaptive-to($tablet-w){
-      padding-bottom: 15px;
+      padding-bottom: 0px;
     }
     
     .map {
@@ -44,6 +51,7 @@
       @include adaptive-to($desktop-wide-w){
         float: none;
         width: auto;
+        margin: 0 -10px;
       }
 
       img {
@@ -68,6 +76,82 @@
         width: 280px;
         vertical-align: top;
         padding-right: 40px;
+      }
+    }
+
+    .basic {
+
+    }
+
+    .addresses-slider {
+      padding: 20px;
+      margin: 0 -10px;
+      background: #ffefd1;
+      position: relative;
+      .label {
+        font-size: 22px;
+        line-height: 24px;
+        .counter {
+          position: absolute;
+          right: 20px;
+          top: 20px;
+          font-size: 16px;
+        }
+      }
+      .slider {
+        ul {
+          width: 9999px;
+          li {
+            float: left;
+          }
+        }
+      }
+      .prev, .next {
+        display: block;
+        width: 48px;
+        height: 48px;
+        background: #e61235;
+        position: absolute;
+        top: 50%;
+        margin-top: -24px;
+        border-radius: 50px;
+        text-align: center;
+        line-height: 48px;
+        opacity: 1;
+        transition: opacity .3s ease, left .3s ease, right .3s ease;
+        &.disabled {
+          opacity: 0;
+        }
+        &:after {
+          content: '';
+        }
+      }
+      .prev {
+        left: 10px;
+        &.disabled {
+          left: -100px;
+        }
+        &:after {
+          @include svg-sprite('addresses-prev');
+        }
+      }
+      .next {
+        right: 10px;
+        &.disabled {
+          right: -100px;
+        }
+        &:after {
+          @include svg-sprite('addresses-next');
+        }
+      }
+    }
+
+    @include adaptive-to($tablet-w){
+      .basic {
+        display: none;
+      }
+      .addresses-slider{
+        display: block !important;
       }
     }
   }

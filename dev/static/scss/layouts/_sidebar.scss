@@ -137,8 +137,9 @@
       margin: 0;
 
       li {
+        position: relative;
         &.favorite {
-          > a .star-icon {
+          > .star-icon {
             @include svg-sprite('star-full');
             @include adaptive-to($desktop-w){
               @include svg-sprite('star-full-big');
@@ -159,16 +160,17 @@
             width: 0;
             font-weight: normal;
           }
-          .star-icon {
-            position: absolute;
-            left: 0;
-            top: -3px;
+        }
+        .star-icon {
+          position: absolute;
+          left: 0;
+          top: -3px;
+          cursor: pointer;
 
 
-            @include adaptive-to($desktop-w){
-              @include svg-sprite('star-big');
-              top: -8px;
-            }
+          @include adaptive-to($desktop-w){
+            @include svg-sprite('star-big');
+            top: -8px;
           }
         }
       }
@@ -253,21 +255,18 @@
         }
         > li {
           &:not(.favorite):hover {
-            > a {
-              .star-icon {
-                @include svg-sprite('star');
+            .star-icon {
+              @include svg-sprite('star');
+              @include adaptive-to($desktop-w){
+                @include svg-sprite('star-big');
+              }
+              &:hover {
+                @include svg-sprite('star-full');
                 @include adaptive-to($desktop-w){
-                  @include svg-sprite('star-big');
-                }
-                &:hover {
-                  @include svg-sprite('star-full');
-                  @include adaptive-to($desktop-w){
-                    @include svg-sprite('star-full-big');
-                  }
+                  @include svg-sprite('star-full-big');
                 }
               }
             }
-            
           }
 
           + li {
