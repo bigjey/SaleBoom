@@ -676,10 +676,10 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 18px;
         height: 19px;
-        background-position: 0px -126px; }
+        background-position: -157px -38px; }
     .c-catalog-item .description .tags {
       margin-top: 18px;
       line-height: 20px; }
@@ -691,37 +691,37 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 16px;
         height: 18px;
-        background-position: -51px -126px; }
+        background-position: -157px -59px; }
         @media (max-width: 999px) {
           .c-catalog-item .description .tags .star-icon {
             display: inline-block;
             vertical-align: middle;
             background-image: url("../i/sprite.svg");
-            background-size: 148px 147px;
+            background-size: 178px 145px;
             width: 26px;
             height: 28px;
-            background-position: -42px -64px;
+            background-position: -64px -20px;
             margin-top: -8px; } }
-        .c-catalog-item .description .tags .star-icon:hover {
+        .c-catalog-item .description .tags .star-icon:hover, .c-catalog-item .description .tags .star-icon.active {
           display: inline-block;
           vertical-align: middle;
           background-image: url("../i/sprite.svg");
-          background-size: 148px 147px;
+          background-size: 178px 145px;
           width: 16px;
           height: 17px;
-          background-position: -69px -126px; }
+          background-position: -157px -119px; }
           @media (max-width: 999px) {
-            .c-catalog-item .description .tags .star-icon:hover {
+            .c-catalog-item .description .tags .star-icon:hover, .c-catalog-item .description .tags .star-icon.active {
               display: inline-block;
               vertical-align: middle;
               background-image: url("../i/sprite.svg");
-              background-size: 148px 147px;
+              background-size: 178px 145px;
               width: 26px;
               height: 26px;
-              background-position: -70px -64px; } }
+              background-position: -126px -63px; } }
       .c-catalog-item .description .tags .provider {
         display: inline-block;
         vertical-align: middle; }
@@ -765,7 +765,10 @@ a {
     left: 0;
     bottom: auto; }
     .c-promo-catalog .promo-box .box-img {
-      opacity: .7; }
+      opacity: .7;
+      display: block; }
+      .c-promo-catalog .promo-box .box-img span {
+        display: block; }
     .c-promo-catalog .promo-box .box-content {
       visibility: hidden; }
     .c-promo-catalog .promo-box.pos-1 {
@@ -939,6 +942,23 @@ a {
     margin: 3px 0 8px;
     font-size: 14px;
     display: none; }
+    .c-form .row-error.with-icon {
+      position: relative;
+      color: #000;
+      padding: 5px;
+      padding-left: 30px; }
+      .c-form .row-error.with-icon:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url("../i/sprite.svg");
+        background-size: 178px 145px;
+        width: 22px;
+        height: 22px;
+        background-position: -126px -91px; }
   .c-form label {
     cursor: pointer; }
     .c-form label:hover {
@@ -1012,6 +1032,46 @@ a {
     left: 0;
     width: 1000px;
     height: 1000%; }
+
+.c-catalog-filter {
+  display: table; }
+  .c-catalog-filter .label {
+    display: table-cell;
+    padding-right: 10px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    vertical-align: top;
+    min-width: 250px; }
+  .c-catalog-filter .filters {
+    display: table-cell;
+    vertical-align: top; }
+  .c-catalog-filter .filter-box {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 20px 10px;
+    background: #ffc960;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 10px; }
+    .c-catalog-filter .filter-box .filter-label {
+      font-size: 14px;
+      line-height: 1;
+      vertical-align: middle;
+      font-weight: bold; }
+    .c-catalog-filter .filter-box .remove {
+      margin-left: 5px;
+      margin-right: -5px; }
+    .c-catalog-filter .filter-box .remove-icon {
+      margin-top: -2px;
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      background-image: url("../i/sprite.svg");
+      background-size: 178px 145px;
+      width: 14px;
+      height: 14px;
+      background-position: -74px -127px; }
 
 .l-header {
   background: #ffc960;
@@ -1318,10 +1378,10 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 19px;
         height: 17px;
-        background-position: -63px -94px; }
+        background-position: -157px 0px; }
         @media (min-width: 1280px) {
           .l-header .auth > a.login .icon {
             display: none; } }
@@ -1330,10 +1390,10 @@ a {
           display: inline-block;
           vertical-align: middle;
           background-image: url("../i/sprite.svg");
-          background-size: 148px 147px;
+          background-size: 178px 145px;
           width: 19px;
           height: 17px;
-          background-position: -42px -94px; } }
+          background-position: -157px -19px; } }
       @media (min-width: 1000px) and (max-width: 1279px) {
         .l-header .auth > a.register {
           display: none; } }
@@ -1476,6 +1536,14 @@ a {
       .l-footer .dev {
         float: none;
         margin-top: 50px; } }
+    .l-footer .dev .logo-icon {
+      display: inline-block;
+      vertical-align: middle;
+      background-image: url("../i/sprite.svg");
+      background-size: 178px 145px;
+      width: 155px;
+      height: 18px;
+      background-position: 0px 0px; }
 
 .footer-placeholder {
   height: 80px; }
@@ -1598,19 +1666,19 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 16px;
         height: 17px;
-        background-position: -69px -126px; }
+        background-position: -157px -119px; }
         @media (max-width: 999px) {
           .l-sidebar .nav ul li.favorite > .star-icon {
             display: inline-block;
             vertical-align: middle;
             background-image: url("../i/sprite.svg");
-            background-size: 148px 147px;
+            background-size: 178px 145px;
             width: 26px;
             height: 26px;
-            background-position: -70px -64px; } }
+            background-position: -126px -63px; } }
       .l-sidebar .nav ul li a {
         display: block;
         position: relative;
@@ -1633,18 +1701,17 @@ a {
             display: inline-block;
             vertical-align: middle;
             background-image: url("../i/sprite.svg");
-            background-size: 148px 147px;
+            background-size: 178px 145px;
             width: 26px;
             height: 28px;
-            background-position: -42px -64px;
+            background-position: -64px -20px;
             top: -8px; } }
   .l-sidebar .nav .lvl-1 > ul > li {
-    border-bottom: 1px dashed transparent; }
+    border-bottom: 1px dashed #ededed; }
     .l-sidebar .nav .lvl-1 > ul > li.open .lvl-2 {
       display: block; }
     .l-sidebar .nav .lvl-1 > ul > li.open > a {
-      padding-bottom: 5px;
-      border-bottom: 1px dashed #ededed; }
+      padding-bottom: 5px; }
     .l-sidebar .nav .lvl-1 > ul > li + li {
       margin-top: 13px; }
     .l-sidebar .nav .lvl-1 > ul > li > a {
@@ -1668,10 +1735,10 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 14px;
         height: 15px;
-        background-position: -103px -126px; }
+        background-position: -58px -127px; }
       .l-sidebar .nav .lvl-2 > ul > li + li {
         margin-top: 10px; }
       .l-sidebar .nav .lvl-2 > ul > li > a {
@@ -1686,10 +1753,10 @@ a {
           display: inline-block;
           vertical-align: middle;
           background-image: url("../i/sprite.svg");
-          background-size: 148px 147px;
+          background-size: 178px 145px;
           width: 14px;
           height: 15px;
-          background-position: -87px -126px; }
+          background-position: -42px -127px; }
   .l-sidebar .nav .lvl-3 {
     display: none; }
     .l-sidebar .nav .lvl-3 > ul {
@@ -1701,36 +1768,36 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 16px;
         height: 18px;
-        background-position: -51px -126px; }
+        background-position: -157px -59px; }
         @media (max-width: 999px) {
           .l-sidebar .nav .lvl-3 > ul > li:not(.favorite):hover .star-icon {
             display: inline-block;
             vertical-align: middle;
             background-image: url("../i/sprite.svg");
-            background-size: 148px 147px;
+            background-size: 178px 145px;
             width: 26px;
             height: 28px;
-            background-position: -42px -64px; } }
+            background-position: -64px -20px; } }
         .l-sidebar .nav .lvl-3 > ul > li:not(.favorite):hover .star-icon:hover {
           display: inline-block;
           vertical-align: middle;
           background-image: url("../i/sprite.svg");
-          background-size: 148px 147px;
+          background-size: 178px 145px;
           width: 16px;
           height: 17px;
-          background-position: -69px -126px; }
+          background-position: -157px -119px; }
           @media (max-width: 999px) {
             .l-sidebar .nav .lvl-3 > ul > li:not(.favorite):hover .star-icon:hover {
               display: inline-block;
               vertical-align: middle;
               background-image: url("../i/sprite.svg");
-              background-size: 148px 147px;
+              background-size: 178px 145px;
               width: 26px;
               height: 26px;
-              background-position: -70px -64px; } }
+              background-position: -126px -63px; } }
       .l-sidebar .nav .lvl-3 > ul > li + li {
         margin-top: 10px; }
         @media (max-width: 999px) {
@@ -1869,9 +1936,18 @@ a {
         margin-left: 15px;
         border-left: 1px solid #c8c8c8; }
   .l-auth-popup .auth-tab {
-    display: none; }
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity .3s ease, transform .3s ease; }
     .l-auth-popup .auth-tab.active {
-      display: block; }
+      position: static;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      transform: translateX(0); }
   .l-auth-popup .login .forgot-password {
     float: right;
     color: #e61235; }
@@ -1925,7 +2001,17 @@ a {
             text-align: center; }
   .l-auth-popup .form-btn.btn-block {
     height: 50px;
-    line-height: 30px; }
+    line-height: 30px;
+    font-size: 16px;
+    letter-spacing: 1px; }
+  .l-auth-popup .form-success .success-title {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold; }
+  .l-auth-popup .form-success .success-text {
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 15px; }
 
 .l-tips {
   position: absolute;
@@ -1986,10 +2072,10 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 40px;
         height: 61px;
-        background-position: -106px 0px; }
+        background-position: -42px -63px; }
     .l-tips .tips-in .tip-auth {
       position: absolute;
       top: 130px;
@@ -2002,10 +2088,10 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 40px;
         height: 60px;
-        background-position: 0px -64px; }
+        background-position: -84px -63px; }
     .l-tips .tips-in .tip-nav {
       position: absolute;
       left: 240px;
@@ -2018,10 +2104,10 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 62px;
         height: 41px;
-        background-position: -42px 0px; }
+        background-position: 0px -20px; }
     .l-tips .tips-in .tip-item {
       position: absolute;
       left: 580px;
@@ -2035,10 +2121,10 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 40px;
         height: 62px;
-        background-position: 0px 0px; }
+        background-position: 0px -63px; }
     .l-tips .tips-in .tip-body {
       position: absolute;
       left: 630px;
@@ -2075,19 +2161,19 @@ a {
             display: inline-block;
             vertical-align: middle;
             background-image: url("../i/sprite.svg");
-            background-size: 148px 147px;
+            background-size: 178px 145px;
             width: 19px;
             height: 15px;
-            background-position: -119px -64px;
+            background-position: -21px -127px;
             vertical-align: middle; }
         .l-tips .tips-in .tip-body .body-in .btn.btn-cancel .icon {
           display: inline-block;
           vertical-align: middle;
           background-image: url("../i/sprite.svg");
-          background-size: 148px 147px;
+          background-size: 178px 145px;
           width: 18px;
           height: 18px;
-          background-position: -31px -126px;
+          background-position: -157px -99px;
           vertical-align: middle; }
         .l-tips .tips-in .tip-body .body-in .btn + .btn {
           margin-left: 15px; }
@@ -2259,6 +2345,14 @@ a {
   .p-feedback .c-form .form-btn.extra-padding {
     padding-left: 60px;
     padding-right: 60px; }
+  .p-feedback .c-form .form-success .success-title {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+    margin-bottom: 10px; }
+  .p-feedback .c-form .form-success .success-text {
+    font-size: 14px;
+    line-height: 22px; }
 
 .p-how-it-works {
   position: relative; }
@@ -2489,10 +2583,10 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 26px;
         height: 19px;
-        background-position: -70px -43px; }
+        background-position: -120px -20px; }
     .p-catalog-item .addresses .addresses-slider .next {
       right: 10px; }
       .p-catalog-item .addresses .addresses-slider .next.disabled {
@@ -2501,10 +2595,10 @@ a {
         display: inline-block;
         vertical-align: middle;
         background-image: url("../i/sprite.svg");
-        background-size: 148px 147px;
+        background-size: 178px 145px;
         width: 26px;
         height: 19px;
-        background-position: -42px -43px; }
+        background-position: -92px -20px; }
   @media (max-width: 767px) {
     .p-catalog-item .addresses .basic {
       display: none; }
@@ -2653,10 +2747,10 @@ a {
           display: inline-block;
           vertical-align: middle;
           background-image: url("../i/sprite.svg");
-          background-size: 148px 147px;
+          background-size: 178px 145px;
           width: 16px;
           height: 17px;
-          background-position: -69px -126px;
+          background-position: -157px -119px;
           cursor: pointer; }
   .p-profile .profile-settings {
     width: 320px;
@@ -2706,6 +2800,10 @@ a {
       @media (max-width: 767px) {
         .p-profile .profile-settings .change-password {
           width: auto; } }
+      .p-profile .profile-settings .change-password .form-success .success-text {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: bold; }
 
 .p-profile-edit {
   padding: 0 10px; }
@@ -2727,6 +2825,33 @@ a {
   .p-profile-edit .form-btn.extra-padding {
     padding-left: 90px;
     padding-right: 90px; }
+
+.p-404 {
+  text-align: center;
+  max-width: 600px;
+  margin: auto; }
+  .p-404 .img {
+    margin-bottom: 40px; }
+    .p-404 .img img {
+      max-width: 100%; }
+  .p-404 .title {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 20px; }
+    @media (max-width: 479px) {
+      .p-404 .title {
+        font-size: 22px; } }
+  .p-404 .text {
+    font-size: 16px;
+    color: #444;
+    line-height: 28px; }
+    @media (max-width: 479px) {
+      .p-404 .text {
+        font-size: 14px;
+        line-height: 22px; } }
+  .p-404 a {
+    color: #e61235; }
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -5413,30 +5538,30 @@ a {
       display: inline-block;
       vertical-align: middle;
       background-image: url("../i/sprite.svg");
-      background-size: 148px 147px;
+      background-size: 178px 145px;
       width: 9px;
       height: 18px;
-      background-position: -20px -126px; }
+      background-position: -157px -79px; }
   .social-likes__widget_twitter:hover {
     background: rgba(64, 153, 255, 0.15); }
     .social-likes__widget_twitter:hover .social-likes__icon {
       display: inline-block;
       vertical-align: middle;
       background-image: url("../i/sprite.svg");
-      background-size: 148px 147px;
+      background-size: 178px 145px;
       width: 19px;
       height: 16px;
-      background-position: -98px -64px; }
+      background-position: 0px -127px; }
   .social-likes__widget_vkontakte:hover {
     background: rgba(69, 102, 142, 0.15); }
     .social-likes__widget_vkontakte:hover .social-likes__icon {
       display: inline-block;
       vertical-align: middle;
       background-image: url("../i/sprite.svg");
-      background-size: 148px 147px;
+      background-size: 178px 145px;
       width: 19px;
       height: 11px;
-      background-position: -84px -94px; }
+      background-position: -64px -50px; }
 
 .social-likes__button {
   height: 31px;
@@ -5463,10 +5588,10 @@ a {
     display: inline-block;
     vertical-align: middle;
     background-image: url("../i/sprite.svg");
-    background-size: 148px 147px;
+    background-size: 178px 145px;
     width: 9px;
     height: 18px;
-    background-position: -20px -126px;
+    background-position: -157px -79px;
     margin-top: -3px;
     top: 8px;
     left: 9px; }
@@ -5474,10 +5599,10 @@ a {
     display: inline-block;
     vertical-align: middle;
     background-image: url("../i/sprite.svg");
-    background-size: 148px 147px;
+    background-size: 178px 145px;
     width: 19px;
     height: 16px;
-    background-position: -98px -64px;
+    background-position: 0px -127px;
     margin-top: -2px;
     left: 4px;
     top: 9px; }
@@ -5485,9 +5610,9 @@ a {
     display: inline-block;
     vertical-align: middle;
     background-image: url("../i/sprite.svg");
-    background-size: 148px 147px;
+    background-size: 178px 145px;
     width: 19px;
     height: 11px;
-    background-position: -84px -94px;
+    background-position: -64px -50px;
     left: 3px;
     top: 9px; }

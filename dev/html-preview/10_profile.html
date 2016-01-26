@@ -458,10 +458,13 @@
             <div class="group-title">СМЕНИТЬ ПАРОЛЬ</div>
 
             <div class="c-form change-password">
-              <form>
+              <form id="changePasswordForm">
                 <div class="form-row">
                   <div class="row-elements">
                     <input type="password" placeholder="Старый пароль" class="input-block">
+                  </div>
+                  <div class="row-error with-icon">
+                    Как вас зовут?
                   </div>
                 </div>
                 <div class="form-row">
@@ -473,11 +476,19 @@
                   <div class="row-elements">
                     <input type="password" placeholder="Повторите новый пароль" class="input-block">
                   </div>
+                  <div class="row-error with-icon">
+                    Как вас зовут?
+                  </div>
                 </div>
                 <div class="form-row row-actions">
-                  <button type="submit" class="form-btn btn-block">Сохранить</button>
+                  <button type="submit" class="form-btn btn-block" id="testSubmit">Сохранить</button>
                 </div>
               </form>
+              
+              <div class="form-success" id="changePasswordFormSuccess" style="display: none;">
+                <div class="success-text">Пароль успешно изменен!</div>
+              </div>
+
             </div>
 
           </div>
@@ -626,6 +637,26 @@
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 
 <script src="../static/js/main.js"></script>
+
+  <script>
+  $(function(){
+    $(document).on('click', '#testSubmit', function(e){
+      e.preventDefault();
+
+      var $form = $(this).closest('form');
+
+      if ($form.hasClass('confirmed')){
+        $form.hide();
+        $('#changePasswordFormSuccess').fadeIn();
+      } else {
+        $form.find('.row-elements input, .row-elements textarea').addClass('shake animated').closest('.form-row').addClass('has-error');
+        $form.addClass('confirmed');
+      }     
+
+      return false;
+    })
+
+  })</script>
 
 </body>
 </html>

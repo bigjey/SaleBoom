@@ -41,13 +41,26 @@
     padding-bottom: 5px;
   }
   .row-input {
-
   }
   .row-error {
     color: $color-firm-red;
     margin: 3px 0 8px;
     font-size: 14px;
     display: none;
+
+    &.with-icon {
+      position: relative;
+      color: #000;
+      padding: 5px;
+      padding-left: 30px;
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        @include svg-sprite('form-error');
+      }
+    }
   }
   label {
     cursor: pointer;

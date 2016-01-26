@@ -28,6 +28,10 @@
 
     .box-img {
       opacity: .7;
+      display: block;
+      span {
+        display: block;
+      }
     }
     .box-content {
       visibility: hidden;

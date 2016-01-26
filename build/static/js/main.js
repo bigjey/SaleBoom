@@ -34,6 +34,11 @@
     
   })
 
+  $(document).on('click', '.c-catalog-filter .filter-box .remove', function(e){
+    e.preventDefault();
+    $(this).closest('.filter-box').fadeOut();
+  })
+
   $(document).on('click', '.tabs-nav a', function(e){
     e.preventDefault();
 
@@ -49,8 +54,8 @@
     $nav.find('a').removeClass('active');
     $link.addClass('active');
 
-    $tabs.find('.tab').removeClass('active');
-    $tab.addClass('active');
+    $tabs.find('.tab').hide();
+    $tab.fadeIn();
 
 
   })

@@ -155,6 +155,10 @@
       margin-top: 50px;
     }
 
+    .logo-icon {
+      @include svg-sprite('rocket_logo');
+    }
+
   }
 
 }

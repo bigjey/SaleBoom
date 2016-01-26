@@ -98,9 +98,22 @@
     }
   }
   .auth-tab {
-    display: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+    
+    transform: translateX(50px);
+    
+    transition: opacity .3s ease, transform .3s ease;
+
     &.active {
-      display: block;
+      position: static;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      
+      transform: translateX(0);
     }
   }
   .login {
@@ -176,6 +189,21 @@
   .form-btn.btn-block {
     height: 50px;
     line-height: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .form-success {
+    .success-title {
+      font-size: 28px;
+      line-height: 36px;
+      font-weight: bold;
+    }
+    .success-text {
+      font-size: 14px;
+      line-height: 22px;
+      padding-bottom: 15px;
+    }
   }
 
 }

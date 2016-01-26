@@ -219,6 +219,13 @@
       @include adaptive-to($tablet-w){
         width: auto;
       }
+      .form-success {
+        .success-text {
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: bold;
+        }
+      }
     }
   }
 

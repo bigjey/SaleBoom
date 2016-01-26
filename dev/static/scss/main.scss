@@ -16,6 +16,7 @@ $sprite: map-get($icons, sprite) !default;
 @import 'components/promo_catalog';
 @import 'components/pagination';
 @import 'components/form';
+@import 'components/catalog_filter';
 
 @import 'layouts/header';
 @import 'layouts/footer';
@@ -32,6 +33,7 @@ $sprite: map-get($icons, sprite) !default;
 @import 'pages/catalog_item';
 @import 'pages/profile';
 @import 'pages/profile_edit';
+@import 'pages/404';
 
 @import 'libs/animate';
 @import 'libs/social-likes';

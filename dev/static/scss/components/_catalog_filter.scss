@@ -1,0 +1,41 @@
+.c-catalog-filter {
+  display: table;
+  .label {
+    display: table-cell;
+    padding-right: 10px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    vertical-align: top;
+    min-width: 250px;
+  }
+  .filters {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .filter-box {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 20px 10px;
+    background: #ffc960;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+
+    .filter-label {
+      font-size: 14px;
+      line-height: 1;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+    .remove {
+      margin-left: 5px;
+      margin-right: -5px;
+    }
+    .remove-icon {
+      margin-top: -2px;
+      content: '';
+      @include svg-sprite('catalog-filter-remove');
+    }
+  }
+}

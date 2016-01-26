@@ -457,7 +457,7 @@
               </div>
               <div class="tags">
                 <div class="provider">
-                  <i class="star-icon"></i><a href="">TravelSystems</a>
+                  <i class="star-icon active"></i><a href="">TravelSystems</a>
                 </div>
                 <div class="category">
                   <i class="star-icon"></i><a href="">туризм</a>
@@ -587,10 +587,10 @@
           
           <div class="promo-box pos-3" data-pos="3" style="z-index: 1;">
             <div class="box-label">ДЕСЕРТЫ</div>
-            <div class="box-img" style="background-image: url(http://ovkuse.com/img/25Pd.jpg);">
-              <div class="img-title">Подборка </div>
-              <div class="img-teaser">Скидки в лучших </div>
-            </div>
+            <a href="" class="box-img" style="background-image: url(http://ovkuse.com/img/25Pd.jpg);">
+              <span class="img-title">Подборка </span>
+              <span class="img-teaser">Скидки в лучших </span>
+            </a>
             <div class="box-content">
               
 
@@ -660,10 +660,10 @@
 
           <div class="promo-box pos-2" data-pos="2" style="z-index: 2;">
             <div class="box-label">СПОРТТОВАРЫ</div>
-            <div class="box-img" style="background-image: url(http://v.img.com.ua/b/600x500/b/d6/c8dd8216a8eb16319d287881c2cd3d6b.jpg);">
-              <div class="img-title">Подборка десертов </div>
-              <div class="img-teaser">Скидки в лучших пекарнях</div>
-            </div>
+            <a href="" class="box-img" style="background-image: url(http://v.img.com.ua/b/600x500/b/d6/c8dd8216a8eb16319d287881c2cd3d6b.jpg);">
+              <span class="img-title">Подборка десертов </span>
+              <span class="img-teaser">Скидки в лучших пекарнях</span>
+            </a>
             <div class="box-content">
               
 
@@ -733,10 +733,10 @@
 
           <div class="promo-box show pos-1" data-pos="1" style="z-index: 3;">
             <div class="box-label">АВТОМОБИЛИ</div>
-            <div class="box-img" style="background-image: url(../tmp/promo-catalog.png);">
-              <div class="img-title">Подборка сентябрьских десертов </div>
-              <div class="img-teaser">Скидки в лучших пекарнях города в одном месте специально для вас!</div>
-            </div>
+            <a href="" class="box-img" style="background-image: url(../tmp/promo-catalog.png);">
+              <span class="img-title">Подборка сентябрьских десертов </span>
+              <span class="img-teaser">Скидки в лучших пекарнях города в одном месте специально для вас!</span>
+            </a>
             <div class="box-content">
               
 
@@ -997,7 +997,7 @@
       </div>
       
       <div class="dev">
-        <a href=""><i class="icon icon-rocket-logo"></i></a>
+        <a href=""><i class="logo-icon"></i></a>
       </div>
 
     </div>
@@ -1011,81 +1011,108 @@
 
       <a href="" class="close-icon" data-action="hide-auth"></a>
 
-      <div class="switcher">
-        <a href="" class="active" data-action="show-auth" data-auth-tab="login">Вход</a>
-        <a href="" data-action="show-auth" data-auth-tab="register">Регистрация</a>
-      </div>
+      <div class="forms">
+        
+        <div class="switcher">
+          <a href="" class="active" data-action="show-auth" data-auth-tab="login">Вход</a>
+          <a href="" data-action="show-auth" data-auth-tab="register">Регистрация</a>
+        </div>
 
-      <div class="login auth-tab" data-auth-tab="login">
-        <div class="c-form">
-          <div class="form-row">
-            <div class="row-label">Почта</div>
-            <div class="row-input">
-              <input class="input-block" type="text" placeholder="Укажите эл. почту">
+        <div class="login auth-tab" data-auth-tab="login">
+          <div class="c-form">
+            <div class="form-row">
+              <div class="row-label">Почта</div>
+              <div class="row-input">
+                <input class="input-block" type="text" placeholder="Укажите эл. почту">
+              </div>
             </div>
-          </div>
-          <div class="form-row">
-            <div class="row-label">Пароль</div>
-            <div class="row-input">
-              <input class="input-block" type="text" placeholder="Введите пароль">
+            <div class="form-row">
+              <div class="row-label">Пароль</div>
+              <div class="row-input">
+                <input class="input-block" type="text" placeholder="Введите пароль">
+              </div>
+              <div class="row-error with-icon">Не правильная почта или пароль</div>
             </div>
-            <div class="row-error">Не правильная почта или пароль</div>
-          </div>
-          <div class="form-row">
-            <div class="clearfix">
-              <a href="" class="forgot-password">Забыли пароль?</a>
-              <div class="checkbox">
-                <input type="checkbox" id="cb1" />
-                <label for="cb1">Запомнить меня</label>
+            <div class="form-row">
+              <div class="clearfix">
+                <a href="" class="forgot-password">Забыли пароль?</a>
+                <div class="checkbox">
+                  <input type="checkbox" id="cb1" />
+                  <label for="cb1">Запомнить меня</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-row row-actions">
+              <div class="row-input">
+                <input type="submit" class="form-btn btn-block" value="ВОЙТИ" id="testSubmit">
               </div>
             </div>
           </div>
-          <div class="form-row row-actions">
-            <div class="row-input">
-              <input type="submit" class="form-btn btn-block" value="ВОЙТИ" id="testSubmit">
-            </div>
+        </div>
+
+        <div class="register auth-tab" data-auth-tab="register">
+          <div class="c-form">
+            <form>
+              <div class="form-row">
+                <div class="row-label">Почта</div>
+                <div class="row-input">
+                  <input class="input-block" type="text" placeholder="Укажите эл. почту">
+                </div>
+                <div class="row-error with-icon">
+                  Укажите корректную почту
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="row-label">Пароль</div>
+                <div class="row-input">
+                  <input class="input-block" type="text" placeholder="Введите пароль">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="row-label">Подтверждение пароля</div>
+                <div class="row-input">
+                  <input class="input-block" type="text" placeholder="Повторите пароль">
+                </div>
+                <div class="row-error with-icon">
+                  Пароли не сопадают
+                </div>
+              </div>
+              <div class="form-row row-actions">
+                <div class="row-input">
+                  <input type="submit" class="form-btn btn-block" value="ЗАРЕГИСТРИРОВАТЬСЯ" id="testRegister">
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-      </div>
 
-      <div class="register auth-tab" data-auth-tab="register">
-        <div class="c-form">
-          <div class="form-row">
-            <div class="row-label">Почта</div>
-            <div class="row-input">
-              <input class="input-block" type="text" placeholder="Укажите эл. почту">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="row-label">Пароль</div>
-            <div class="row-input">
-              <input class="input-block" type="text" placeholder="Введите пароль">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="row-label">Подтверждение пароля</div>
-            <div class="row-input">
-              <input class="input-block" type="text" placeholder="Повторите пароль">
-            </div>
-          </div>
-          <div class="form-row row-actions">
-            <div class="row-input">
-              <input type="submit" class="form-btn btn-block" value="ЗАРЕГИСТРИРОВАТЬСЯ">
-            </div>
-          </div>
+        <div class="social-login">
+          <div class="label">Войти с помощью соцсетей:</div>
+          <ul>
+            <li><a href="" class="fb"><span class="icon-box"><i class="icon icon-social-login-fb"></i></span> через Фейсбук</a></li>
+            <li><a href="" class="twt"><span class="icon-box"><i class="icon icon-social-login-twt"></i></span> через Твиттер</a></li>
+            <li><a href="" class="vk"><span class="icon-box"><i class="icon icon-social-login-vk"></i></span> через Вконтакте</a></li>
+            <li><a href="" class="gp"><span class="icon-box"><i class="icon icon-social-login-gp"></i></span> через Гугл плюс</a></li>
+          </ul>
         </div>
-      </div>
-
-      <div class="social-login">
-        <div class="label">Войти с помощью соцсетей:</div>
-        <ul>
-          <li><a href="" class="fb"><span class="icon-box"><i class="icon icon-social-login-fb"></i></span> через Фейсбук</a></li>
-          <li><a href="" class="twt"><span class="icon-box"><i class="icon icon-social-login-twt"></i></span> через Твиттер</a></li>
-          <li><a href="" class="vk"><span class="icon-box"><i class="icon icon-social-login-vk"></i></span> через Вконтакте</a></li>
-          <li><a href="" class="gp"><span class="icon-box"><i class="icon icon-social-login-gp"></i></span> через Гугл плюс</a></li>
-        </ul>
-      </div>
     
+      </div>
+
+
+      <div class="form-success c-form" id="registerFormSuccess" style="display: none;">
+        <div class="success-title">Вы успешно зарегистрировались!</div>
+        <div class="success-text">
+          <p>На указанную вами почту мы будем присылать
+новые акции и скидки по избранным категориям
+и брендам.</p>
+
+<p>Теперь вы можете начать знакомиться с сайтом!</p>
+        </div>
+        <div class="form-row row-actions">
+          <button class="form-btn btn-block" data-action="hide-auth">ОК, ВСЕ ПОНЯТНО</button>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -1121,7 +1148,25 @@
 
         return false;
       })
+
+      $(document).on('click', '#testRegister', function(e){
+        e.preventDefault();
+
+        var $form = $(this).closest('form');
+
+        if ($form.hasClass('confirmed')){
+          $form.closest('.forms').hide();
+          $('#registerFormSuccess').fadeIn();
+        } else {
+          $form.find('.row-input input, .row-input textarea').addClass('shake animated').closest('.form-row').addClass('has-error');
+          $form.addClass('confirmed');
+        }     
+
+        return false;
+      })
+
     })
+
   </script>
 
 </body>

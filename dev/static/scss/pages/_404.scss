@@ -1,0 +1,39 @@
+.p-404 {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+
+  .img {
+    margin-bottom: 40px;
+    img {
+      max-width: 100%;
+    }
+  }
+  .title {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 20px;
+
+
+    @include adaptive-to(480px){
+      font-size: 22px;
+    }
+
+  }
+  .text {
+    font-size: 16px;
+    color: #444;
+    line-height: 28px;
+    @include adaptive-to(480px){      
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+  }
+  a {
+    color: $color-firm-red;
+  }
+
+
+}

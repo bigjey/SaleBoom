@@ -390,11 +390,17 @@
                 <div class="row-elements">
                   <input type="text" class="input-block short" placeholder="Введите ваше имя">
                 </div>
+                <div class="row-error with-icon">
+                  Как вас зовут?
+                </div>
               </div>
               <div class="form-row">
                 <div class="row-label">Почта</div>
                 <div class="row-elements">
                   <input type="text" class="input-block short" placeholder="Укажите электронную почту">
+                </div>
+                <div class="row-error with-icon">
+                  Укажите корректную почту
                 </div>
               </div>
               <div class="form-row">
@@ -402,11 +408,20 @@
                 <div class="row-elements">
                   <textarea class="input-block" placeholder="Расскажите о том, как по-вашему можно сделать проект лучше?"></textarea>
                 </div>
+                <div class="row-error with-icon">
+                  Укажите корректную почту
+                </div>
               </div>
               <div class="form-row row-actions">
-                <button type="submit" class="form-btn extra-padding">Отправить</button>
+                <button type="submit" class="form-btn extra-padding" id="testSubmit">Отправить</button>
               </div>
             </form>
+
+            <div class="form-success" id="feedbackFormSuccess" style="display: none;">
+              <div class="success-title">Мы получили ваш отзыв!</div>
+              <div class="success-text">Если в отзыве были вопросы, то мы постараемся ответить вам оперативно.<br>Спасибо за ваше неравнодушие к проекту :)</div>
+            </div>
+
           </div>
 
         </div>
@@ -554,6 +569,26 @@
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 
 <script src="../static/js/main.js"></script>
+
+  <script>
+  $(function(){
+    $(document).on('click', '#testSubmit', function(e){
+      e.preventDefault();
+
+      var $form = $(this).closest('form');
+
+      if ($form.hasClass('confirmed')){
+        $form.hide();
+        $('#registerFormSuccess').fadeIn();
+      } else {
+        $form.find('.row-elements input, .row-elements textarea').addClass('shake animated').closest('.form-row').addClass('has-error');
+        $form.addClass('confirmed');
+      }     
+
+      return false;
+    })
+
+  })</script>
 
 </body>
 </html>

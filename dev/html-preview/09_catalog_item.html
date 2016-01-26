@@ -828,7 +828,9 @@
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
         center: center,
-        disableDefaultUI: true
+        disableDefaultUI: true,
+        zoomControl: false, 
+        scrollwheel: false
       });
 
       var markers = [{lat: 43.22294099990729, lng:76.8412971496582}, {lat: 43.237387032521454, lng:76.87751770019531}]

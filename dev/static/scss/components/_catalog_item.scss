@@ -136,7 +136,7 @@
           margin-top: -8px;
         }
 
-        &:hover {
+        &:hover, &.active {
           @include svg-sprite(star-full);
           
           @include adaptive-to($desktop-w){

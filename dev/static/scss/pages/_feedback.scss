@@ -13,5 +13,18 @@
       padding-left: 60px;
       padding-right: 60px;
     }
+
+    .form-success {
+      .success-title {
+        font-size: 28px;
+        line-height: 36px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .success-text {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
   }
 }
